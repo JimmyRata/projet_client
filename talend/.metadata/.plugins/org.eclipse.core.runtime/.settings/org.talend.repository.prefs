@@ -1,0 +1,2 @@
+TOS_Jobs_Records={"API_CLIENT"\:{"projects"\:{"PROCESS"\:{"details"\:{"components"\:[{"component_name"\:"tFileInputDelimited","count"\:1},{"component_name"\:"tRESTClient","count"\:1},{"component_name"\:"tLogRow","count"\:2},{"component_name"\:"tMap","count"\:1},{"component_name"\:"tExtractJSONFields","count"\:1},{"component_name"\:"tReplicate","count"\:1},{"component_name"\:"tFilterRow","count"\:2}],"nb.components"\:9,"nb.contextVars"\:4},"nb"\:1}},"type"\:"local"}}
+eclipse.preferences.version=1
