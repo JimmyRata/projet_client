@@ -1,0 +1,328 @@
+!SESSION 2026-04-26 19:38:08.981 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_481
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -talendReload false
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data file:/C:/Users/Cryo/Documents/projet_client/talend/ -talendReload false
+
+!ENTRY org.eclipse.jdt.launching.macosx 4 0 2026-04-26 19:38:09.919
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.macosx [20]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:451)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1762)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1725)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1656)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.jdt.launching.ui.macosx 4 0 2026-04-26 19:38:09.922
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.ui.macosx [21]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:451)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1762)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1725)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1656)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:38:12.446
+!MESSAGE 2026-04-26 19:38:12,442 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\studio.keys
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-26 19:38:39.162
+!MESSAGE 2026-04-26 19:38:39,162 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [org.talend.sdk.component.server.service.ComponentManagerService.init] No system property 'jdk.serialFilter', ensure it is intended
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-26 19:38:43.585
+!MESSAGE 2026-04-26 19:38:43,584 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: esb-java-11-group
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-26 19:38:43.707
+!MESSAGE 2026-04-26 19:38:43,706 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: esb-java-11-group
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:38:50.354
+!MESSAGE 2026-04-26 19:38:50,354 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:38:50.356
+!MESSAGE 2026-04-26 19:38:50,356 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_ROUTINES/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:38:50.358
+!MESSAGE 2026-04-26 19:38:50,358 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:38:50.359
+!MESSAGE 2026-04-26 19:38:50,359 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:38:55.984
+!MESSAGE 2026-04-26 19:38:55,982 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Cryo\Documents\projet_client\talend\API_CLIENT\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:38:55.987
+!MESSAGE 2026-04-26 19:38:55,985 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:38:59.096
+!MESSAGE 2026-04-26 19:38:59,096 INFO  org.talend.core.repository.model.ProxyRepositoryFactory  - user@talend.com connecté à api_client
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:39:00.095
+!MESSAGE 2026-04-26 19:39:00,095 INFO  org.talend.core.repository.logintask.ReadOnlyProjectConfirm  - ReadOnly confirm
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-26 19:39:00.570
+!MESSAGE 2026-04-26 19:39:00,568 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: esb-java-11-group
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-26 19:39:00.582
+!MESSAGE 2026-04-26 19:39:00,581 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: esb-java-11-group
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:39:10.998
+!MESSAGE 2026-04-26 19:39:10,998 INFO  org.talend.librariesmanager.librarydata.LibraryDataService  - org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact com.teradata:terajdbc4:pom:16.20.00.02 in talend (https://talend-update.talend.com/nexus/content/repositories/libraries/)
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:39:11.346
+!MESSAGE 2026-04-26 19:39:11,346 INFO  org.talend.librariesmanager.librarydata.LibraryDataService  - org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact com.teradata:tdgssconfig:pom:16.20.00.02 in talend (https://talend-update.talend.com/nexus/content/repositories/libraries/)
+
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:33.230
+!MESSAGE 2026-04-26 19:39:33,230 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download arrow-format-0.8.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:dC29KMELrt2asFxwS7sfRI%2FJ6sdTTt+qV3nD5oSxjEQeyu2k2ilgaA1uk3U=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.arrow/arrow-format/0.8.0.3.1.4.12-1/jar failed!
+
+!STACK 0
+java.lang.Exception: Download arrow-format-0.8.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:dC29KMELrt2asFxwS7sfRI%2FJ6sdTTt+qV3nD5oSxjEQeyu2k2ilgaA1uk3U=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.arrow/arrow-format/0.8.0.3.1.4.12-1/jar failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.arrow:arrow-format:jar:0.8.0.3.1.4.12-1: [Could not find artifact org.apache.arrow:arrow-format:jar:0.8.0.3.1.4.12-1 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.arrow:arrow-format:jar:0.8.0.3.1.4.12-1
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:33.968
+!MESSAGE 2026-04-26 19:39:33,966 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download arrow-memory-0.8.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:lapPrDqlRttKZ6AdgoE0%2FD7JH3EfKh+FhOwpN2NeYd8Q9lj9D4UX+vxFOxE=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.arrow/arrow-memory/0.8.0.3.1.4.12-1/jar failed!
+
+!STACK 0
+java.lang.Exception: Download arrow-memory-0.8.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:lapPrDqlRttKZ6AdgoE0%2FD7JH3EfKh+FhOwpN2NeYd8Q9lj9D4UX+vxFOxE=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.arrow/arrow-memory/0.8.0.3.1.4.12-1/jar failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.arrow:arrow-memory:jar:0.8.0.3.1.4.12-1: [Could not find artifact org.apache.arrow:arrow-memory:jar:0.8.0.3.1.4.12-1 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.arrow:arrow-memory:jar:0.8.0.3.1.4.12-1
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:34.960
+!MESSAGE 2026-04-26 19:39:34,959 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download arrow-vector-0.8.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:+iDy+R0zV8MUoDeP8SAof%2F%2Fg7dsgR+5WnpQ20G7Dqs9k3hT1sGHzV53pqhA=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.arrow/arrow-vector/0.8.0.3.1.4.12-1/jar failed!
+
+!STACK 0
+java.lang.Exception: Download arrow-vector-0.8.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:+iDy+R0zV8MUoDeP8SAof%2F%2Fg7dsgR+5WnpQ20G7Dqs9k3hT1sGHzV53pqhA=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.arrow/arrow-vector/0.8.0.3.1.4.12-1/jar failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.arrow:arrow-vector:jar:0.8.0.3.1.4.12-1: [Could not find artifact org.apache.arrow:arrow-vector:jar:0.8.0.3.1.4.12-1 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.arrow:arrow-vector:jar:0.8.0.3.1.4.12-1
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:35.636
+!MESSAGE 2026-04-26 19:39:35,635 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download atlas-client-1.1.0.3.1.4.12-1.pom : mvn:https://studio-dl-client:enc:system.encryption.key.v1:%2FgTxePTpF32uKkxKpOm01eEB2pos60AOUZ+rZ%2FmJZNHHfU4ZC2NNHZFh44s=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.atlas/atlas-client/1.1.0.3.1.4.12-1/pom failed!
+
+!STACK 0
+java.lang.Exception: Download atlas-client-1.1.0.3.1.4.12-1.pom : mvn:https://studio-dl-client:enc:system.encryption.key.v1:%2FgTxePTpF32uKkxKpOm01eEB2pos60AOUZ+rZ%2FmJZNHHfU4ZC2NNHZFh44s=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.atlas/atlas-client/1.1.0.3.1.4.12-1/pom failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.atlas:atlas-client:pom:1.1.0.3.1.4.12-1: [Could not find artifact org.apache.atlas:atlas-client:pom:1.1.0.3.1.4.12-1 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.atlas:atlas-client:pom:1.1.0.3.1.4.12-1
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:36.519
+!MESSAGE 2026-04-26 19:39:36,519 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download avatica-1.10.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:0mVDrQ7xBBIlpJmFc+Xt2pgEtimgPn%2FJZxP6EquF9vjbeRpsGueEkLlnO9E=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica/1.10.0.3.1.4.12-1/jar failed!
+
+!STACK 0
+java.lang.Exception: Download avatica-1.10.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:0mVDrQ7xBBIlpJmFc+Xt2pgEtimgPn%2FJZxP6EquF9vjbeRpsGueEkLlnO9E=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica/1.10.0.3.1.4.12-1/jar failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.calcite.avatica:avatica:jar:1.10.0.3.1.4.12-1: [Could not find artifact org.apache.calcite.avatica:avatica:jar:1.10.0.3.1.4.12-1 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.calcite.avatica:avatica:jar:1.10.0.3.1.4.12-1
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:37.269
+!MESSAGE 2026-04-26 19:39:37,269 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download avatica-1.8.0.2.6.0.3-8.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:qXABLSJVfHVCad1ErbzQG9dYZh7w79wICnugLAu41UpiIZb6wxF5DEHcKb8=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica/1.8.0.2.6.0.3-8/jar failed!
+
+!STACK 0
+java.lang.Exception: Download avatica-1.8.0.2.6.0.3-8.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:qXABLSJVfHVCad1ErbzQG9dYZh7w79wICnugLAu41UpiIZb6wxF5DEHcKb8=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica/1.8.0.2.6.0.3-8/jar failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.calcite.avatica:avatica:jar:1.8.0.2.6.0.3-8: [Could not find artifact org.apache.calcite.avatica:avatica:jar:1.8.0.2.6.0.3-8 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.calcite.avatica:avatica:jar:1.8.0.2.6.0.3-8
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:37.913
+!MESSAGE 2026-04-26 19:39:37,913 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download avatica-core-1.10.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:SEtP89nf0iXomj1hN0ywrGZxI0vc+yRistGjvQtgHwllRlimLNKa5aqSoN8=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica-core/1.10.0.3.1.4.12-1/jar failed!
+
+!STACK 0
+java.lang.Exception: Download avatica-core-1.10.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:SEtP89nf0iXomj1hN0ywrGZxI0vc+yRistGjvQtgHwllRlimLNKa5aqSoN8=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica-core/1.10.0.3.1.4.12-1/jar failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.calcite.avatica:avatica-core:jar:1.10.0.3.1.4.12-1: [Could not find artifact org.apache.calcite.avatica:avatica-core:jar:1.10.0.3.1.4.12-1 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.calcite.avatica:avatica-core:jar:1.10.0.3.1.4.12-1
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:38.672
+!MESSAGE 2026-04-26 19:39:38,671 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download avatica-metrics-1.10.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:7pBAlqdK22be+DV9eIz4dKKabBAJ4bRT4YWOj+eCcRgEB1exb%2FSJ8dyvbkA=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica-metrics/1.10.0.3.1.4.12-1/jar failed!
+
+!STACK 0
+java.lang.Exception: Download avatica-metrics-1.10.0.3.1.4.12-1.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:7pBAlqdK22be+DV9eIz4dKKabBAJ4bRT4YWOj+eCcRgEB1exb%2FSJ8dyvbkA=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica-metrics/1.10.0.3.1.4.12-1/jar failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.calcite.avatica:avatica-metrics:jar:1.10.0.3.1.4.12-1: [Could not find artifact org.apache.calcite.avatica:avatica-metrics:jar:1.10.0.3.1.4.12-1 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.calcite.avatica:avatica-metrics:jar:1.10.0.3.1.4.12-1
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-26 19:39:39.567
+!MESSAGE 2026-04-26 19:39:39,567 ERROR org.talend.commons.exception.CommonExceptionHandler  - Download avatica-metrics-1.8.0.2.6.0.3-8.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:othnrdP67SSQNPvGsR5JY91c22pltLZwn73YexKxfT5pnb+gGocn1Q3zd9o=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica-metrics/1.8.0.2.6.0.3-8/jar failed!
+
+!STACK 0
+java.lang.Exception: Download avatica-metrics-1.8.0.2.6.0.3-8.jar : mvn:https://studio-dl-client:enc:system.encryption.key.v1:othnrdP67SSQNPvGsR5JY91c22pltLZwn73YexKxfT5pnb+gGocn1Q3zd9o=@talend-update.talend.com/nexus/content/groups/dynamicdistribution/!org.apache.calcite.avatica/avatica-metrics/1.8.0.2.6.0.3-8/jar failed!
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:136)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.run(DownloadModuleRunnable.java:87)
+	at org.talend.updates.runtime.model.TalendWebServiceUpdateExtraFeature.install(TalendWebServiceUpdateExtraFeature.java:97)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.installFeature(InstallNewFeatureJob.java:77)
+	at org.talend.updates.runtime.engine.InstallNewFeatureJob.run(InstallNewFeatureJob.java:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Error resolving artifact org.apache.calcite.avatica:avatica-metrics:jar:1.8.0.2.6.0.3-8: [Could not find artifact org.apache.calcite.avatica:avatica-metrics:jar:1.8.0.2.6.0.3-8 in repo_-1625987577 (https://talend-update.talend.com/nexus/content/groups/dynamicdistribution/)]
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:30)
+	at org.talend.core.nexus.TalendMavenResolver.resolve(TalendMavenResolver.java:122)
+	at org.talend.librariesmanager.model.service.LocalLibraryManager.resolveJar(LocalLibraryManager.java:463)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.resolveJar(NexusDownloadHelperWithProgress.java:101)
+	at org.talend.librariesmanager.utils.nexus.NexusDownloadHelperWithProgress.download(NexusDownloadHelperWithProgress.java:76)
+	at org.talend.librariesmanager.utils.DownloadModuleRunnable.downLoad(DownloadModuleRunnable.java:129)
+	... 5 more
+Caused by: java.lang.Exception: Error resolving artifact org.apache.calcite.avatica:avatica-metrics:jar:1.8.0.2.6.0.3-8
+	at org.talend.core.nexus.ResolverExceptionHandler.hideCredential(ResolverExceptionHandler.java:28)
+	... 10 more
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:40:21.844
+!MESSAGE 2026-04-26 19:40:21,844 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:40:21.961
+!MESSAGE 2026-04-26 19:40:21,960 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:40:21.963
+!MESSAGE 2026-04-26 19:40:21,961 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:40:21.973
+!MESSAGE 2026-04-26 19:40:21,973 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-26 19:40:21.975
+!MESSAGE 2026-04-26 19:40:21,973 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
