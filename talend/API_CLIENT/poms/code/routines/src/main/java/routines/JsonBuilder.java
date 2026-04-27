@@ -1,0 +1,192 @@
+package routines;
+
+import java.util.Map;
+import java.util.LinkedHashMap;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import java.io.ByteArrayInputStream;
+
+/**
+ * JsonBuilder - Routine générique de construction et conversion JSON
+ * Réutilisable sur tous les jobs Talend et Talend ESB
+ *
+ * @author TonNom
+ * @version 2.0
+ */
+public class JsonBuilder {
+
+    /**
+     * Convertit une Map de champs en JSON string
+     *
+     * Exemple :
+     *   Map<String, Object> fields = new LinkedHashMap<>();
+     *   fields.put("id", 1);
+     *   fields.put("nom", "Dupont");
+     *   JsonBuilder.toJson(fields);
+     *   → {"id":1,"nom":"Dupont"}
+     */
+    public static String toJson(Map<String, Object> fields) {
+        if (fields == null || fields.isEmpty()) {
+            return "{}";
+        }
+
+        StringBuilder sb = new StringBuilder("{");
+        boolean first = true;
+
+        for (Map.Entry<String, Object> entry : fields.entrySet()) {
+            if (!first) sb.append(",");
+            first = false;
+
+            sb.append("\"")
+              .append(escapeString(entry.getKey()))
+              .append("\":");
+
+            Object value = entry.getValue();
+            if (value == null) {
+                sb.append("null");
+            } else if (value instanceof Integer
+                    || value instanceof Long
+                    || value instanceof Double
+                    || value instanceof Float) {
+                sb.append(value);
+            } else if (value instanceof Boolean) {
+                sb.append(value);
+            } else {
+                sb.append("\"")
+                  .append(escapeString(value.toString()))
+                  .append("\"");
+            }
+        }
+
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Convertit un XML string en JSON string
+     * Utile en contexte ESB pour transformer des messages SOAP/XML
+     * vers des APIs REST
+     *
+     * Exemple :
+     *   JsonBuilder.fromXml(
+     *     "<client><id>1</id><nom>Dupont</nom><ville>Paris</ville></client>"
+     *   );
+     *   → {"id":"1","nom":"Dupont","ville":"Paris"}
+     *
+     * Exemple avec balise racine personnalisée :
+     *   JsonBuilder.fromXml(
+     *     "<root><clients><id>1</id><nom>Dupont</nom></clients></root>",
+     *     "clients"
+     *   );
+     *   → {"id":"1","nom":"Dupont"}
+     */
+    public static String fromXml(String xml) {
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(
+                new ByteArrayInputStream(xml.getBytes("UTF-8"))
+            );
+            doc.getDocumentElement().normalize();
+
+            // Prend la balise racine par défaut
+            Node root = doc.getDocumentElement();
+            return nodeToJson(root);
+
+        } catch (Exception e) {
+            return "{\"error\":\"" + escapeString(e.getMessage()) + "\"}";
+        }
+    }
+
+    /**
+     * Surcharge avec balise racine personnalisée
+     * Utile quand le XML a plusieurs niveaux de profondeur
+     */
+    public static String fromXml(String xml, String rootTag) {
+        try {
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = factory.newDocumentBuilder();
+            Document doc = builder.parse(
+                new ByteArrayInputStream(xml.getBytes("UTF-8"))
+            );
+            doc.getDocumentElement().normalize();
+
+            NodeList nodes = doc.getElementsByTagName(rootTag);
+            if (nodes.getLength() == 0) {
+                return "{\"error\":\"Tag " + rootTag + " non trouvé\"}";
+            }
+
+            return nodeToJson(nodes.item(0));
+
+        } catch (Exception e) {
+            return "{\"error\":\"" + escapeString(e.getMessage()) + "\"}";
+        }
+    }
+
+    /**
+     * Convertit récursivement un noeud XML en JSON
+     */
+    private static String nodeToJson(Node node) {
+        StringBuilder sb = new StringBuilder("{");
+        boolean first = true;
+
+        NodeList children = node.getChildNodes();
+        for (int i = 0; i < children.getLength(); i++) {
+            Node child = children.item(i);
+            if (child.getNodeType() == Node.TEXT_NODE) continue;
+
+            if (!first) sb.append(",");
+            first = false;
+
+            String key = child.getNodeName();
+            sb.append("\"").append(escapeString(key)).append("\":");
+
+            boolean hasChildElements = false;
+            NodeList grandChildren = child.getChildNodes();
+            for (int j = 0; j < grandChildren.getLength(); j++) {
+                if (grandChildren.item(j).getNodeType() == Node.ELEMENT_NODE) {
+                    hasChildElements = true;
+                    break;
+                }
+            }
+
+            if (hasChildElements) {
+                sb.append(nodeToJson(child));
+            } else {
+                String value = child.getTextContent();
+                // Détecte si la valeur est un entier
+                if (value.matches("^-?\\d+$")) {
+                    sb.append(value); // Integer sans guillemets
+                // Détecte si la valeur est un décimal
+                } else if (value.matches("^-?\\d+\\.\\d+$")) {
+                    sb.append(value); // Double sans guillemets
+                // Détecte si la valeur est un booléen
+                } else if (value.equals("true") || value.equals("false")) {
+                    sb.append(value); // Boolean sans guillemets
+                } else {
+                    sb.append("\"").append(escapeString(value)).append("\"");
+                }
+            }
+        }
+
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Échappe les caractères spéciaux JSON
+     */
+    private static String escapeString(String value) {
+        if (value == null) return "";
+        return value
+            .replace("\\", "\\\\")
+            .replace("\"", "\\\"")
+            .replace("\n", "\\n")
+            .replace("\r", "\\r")
+            .replace("\t", "\\t")
+            .replace("/", "\\/");
+    }
+}

@@ -16,6 +16,7 @@
 
 package api_client.f011_api_0_1;
 
+import routines.JsonBuilder;
 import routines.Numeric;
 import routines.DataOperation;
 import routines.TalendDataGenerator;
@@ -40,6 +41,9 @@ import java.io.ObjectOutputStream;
 import java.io.ObjectInputStream;
 import java.io.IOException;
 import java.util.Comparator;
+
+//the import part of tJavaRow_1
+//import java.util.List;
 
 @SuppressWarnings("unused")
 
@@ -337,7 +341,67 @@ public class F011_API implements TalendJob {
 		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
+	public void tReplicate_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tFilterRow_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tXMLMap_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tJavaRow_1_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
 	public void tLogRow_3_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tRESTClient_2_error(Exception exception, String errorComponent,
+			final java.util.Map<String, Object> globalMap) throws TalendException {
+
+		end_Hash.put(errorComponent, System.currentTimeMillis());
+
+		status = "failure";
+
+		tFileInputDelimited_1_onSubJobError(exception, errorComponent, globalMap);
+	}
+
+	public void tLogRow_4_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -377,7 +441,7 @@ public class F011_API implements TalendJob {
 		tRESTClient_1_onSubJobError(exception, errorComponent, globalMap);
 	}
 
-	public void tAdvancedHash_row5_error(Exception exception, String errorComponent,
+	public void tAdvancedHash_row_api_error(Exception exception, String errorComponent,
 			final java.util.Map<String, Object> globalMap) throws TalendException {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -403,7 +467,494 @@ public class F011_API implements TalendJob {
 
 	}
 
-	public static class out1Struct implements routines.system.IPersistableRow<out1Struct> {
+	public static class row9Struct implements routines.system.IPersistableRow<row9Struct> {
+		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
+		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
+
+		public Integer statusCode;
+
+		public Integer getStatusCode() {
+			return this.statusCode;
+		}
+
+		public routines.system.Document body;
+
+		public routines.system.Document getBody() {
+			return this.body;
+		}
+
+		public String string;
+
+		public String getString() {
+			return this.string;
+		}
+
+		private Integer readInteger(ObjectInputStream dis) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException {
+			if (intNum == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeInt(intNum);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_API_CLIENT_F011_API.length) {
+					if (length < 1024 && commonByteArray_API_CLIENT_F011_API.length == 0) {
+						commonByteArray_API_CLIENT_F011_API = new byte[1024];
+					} else {
+						commonByteArray_API_CLIENT_F011_API = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_API_CLIENT_F011_API, 0, length);
+				strReturn = new String(commonByteArray_API_CLIENT_F011_API, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_API_CLIENT_F011_API) {
+
+				try {
+
+					int length = 0;
+
+					this.statusCode = readInteger(dis);
+
+					this.body = (routines.system.Document) dis.readObject();
+
+					this.string = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				} catch (ClassNotFoundException eCNFE) {
+					throw new RuntimeException(eCNFE);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// Integer
+
+				writeInteger(this.statusCode, dos);
+
+				// Document
+
+				dos.writeObject(this.body);
+
+				// String
+
+				writeString(this.string, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("statusCode=" + String.valueOf(statusCode));
+			sb.append(",body=" + String.valueOf(body));
+			sb.append(",string=" + string);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row9Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row8Struct implements routines.system.IPersistableRow<row8Struct> {
+		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
+		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
+
+		public String body;
+
+		public String getBody() {
+			return this.body;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_API_CLIENT_F011_API.length) {
+					if (length < 1024 && commonByteArray_API_CLIENT_F011_API.length == 0) {
+						commonByteArray_API_CLIENT_F011_API = new byte[1024];
+					} else {
+						commonByteArray_API_CLIENT_F011_API = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_API_CLIENT_F011_API, 0, length);
+				strReturn = new String(commonByteArray_API_CLIENT_F011_API, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_API_CLIENT_F011_API) {
+
+				try {
+
+					int length = 0;
+
+					this.body = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.body, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("body=" + body);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row8Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row7Struct implements routines.system.IPersistableRow<row7Struct> {
+		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
+		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
+
+		public String body;
+
+		public String getBody() {
+			return this.body;
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_API_CLIENT_F011_API.length) {
+					if (length < 1024 && commonByteArray_API_CLIENT_F011_API.length == 0) {
+						commonByteArray_API_CLIENT_F011_API = new byte[1024];
+					} else {
+						commonByteArray_API_CLIENT_F011_API = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_API_CLIENT_F011_API, 0, length);
+				strReturn = new String(commonByteArray_API_CLIENT_F011_API, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_API_CLIENT_F011_API) {
+
+				try {
+
+					int length = 0;
+
+					this.body = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// String
+
+				writeString(this.body, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("body=" + body);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row7Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class xmloutputStruct implements routines.system.IPersistableRow<xmloutputStruct> {
+		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
+		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
+
+		public routines.system.Document newColumn;
+
+		public routines.system.Document getNewColumn() {
+			return this.newColumn;
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_API_CLIENT_F011_API) {
+
+				try {
+
+					int length = 0;
+
+					this.newColumn = (routines.system.Document) dis.readObject();
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				} catch (ClassNotFoundException eCNFE) {
+					throw new RuntimeException(eCNFE);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// Document
+
+				dos.writeObject(this.newColumn);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("newColumn=" + String.valueOf(newColumn));
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(xmloutputStruct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row6Struct implements routines.system.IPersistableRow<row6Struct> {
 		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
 		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
 
@@ -435,6 +986,12 @@ public class F011_API implements TalendJob {
 
 		public String getVille() {
 			return this.ville;
+		}
+
+		public String statut;
+
+		public String getStatut() {
+			return this.statut;
 		}
 
 		private Integer readInteger(ObjectInputStream dis) throws IOException {
@@ -506,6 +1063,8 @@ public class F011_API implements TalendJob {
 
 					this.ville = readString(dis);
 
+					this.statut = readString(dis);
+
 				} catch (IOException e) {
 					throw new RuntimeException(e);
 
@@ -538,6 +1097,10 @@ public class F011_API implements TalendJob {
 
 				writeString(this.ville, dos);
 
+				// String
+
+				writeString(this.statut, dos);
+
 			} catch (IOException e) {
 				throw new RuntimeException(e);
 			}
@@ -554,6 +1117,411 @@ public class F011_API implements TalendJob {
 			sb.append(",prenom=" + prenom);
 			sb.append(",email=" + email);
 			sb.append(",ville=" + ville);
+			sb.append(",statut=" + statut);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row6Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class row4Struct implements routines.system.IPersistableRow<row4Struct> {
+		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
+		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
+
+		public Integer id;
+
+		public Integer getId() {
+			return this.id;
+		}
+
+		public String nom;
+
+		public String getNom() {
+			return this.nom;
+		}
+
+		public String prenom;
+
+		public String getPrenom() {
+			return this.prenom;
+		}
+
+		public String email;
+
+		public String getEmail() {
+			return this.email;
+		}
+
+		public String ville;
+
+		public String getVille() {
+			return this.ville;
+		}
+
+		public String statut;
+
+		public String getStatut() {
+			return this.statut;
+		}
+
+		private Integer readInteger(ObjectInputStream dis) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException {
+			if (intNum == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeInt(intNum);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_API_CLIENT_F011_API.length) {
+					if (length < 1024 && commonByteArray_API_CLIENT_F011_API.length == 0) {
+						commonByteArray_API_CLIENT_F011_API = new byte[1024];
+					} else {
+						commonByteArray_API_CLIENT_F011_API = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_API_CLIENT_F011_API, 0, length);
+				strReturn = new String(commonByteArray_API_CLIENT_F011_API, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_API_CLIENT_F011_API) {
+
+				try {
+
+					int length = 0;
+
+					this.id = readInteger(dis);
+
+					this.nom = readString(dis);
+
+					this.prenom = readString(dis);
+
+					this.email = readString(dis);
+
+					this.ville = readString(dis);
+
+					this.statut = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// Integer
+
+				writeInteger(this.id, dos);
+
+				// String
+
+				writeString(this.nom, dos);
+
+				// String
+
+				writeString(this.prenom, dos);
+
+				// String
+
+				writeString(this.email, dos);
+
+				// String
+
+				writeString(this.ville, dos);
+
+				// String
+
+				writeString(this.statut, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("id=" + String.valueOf(id));
+			sb.append(",nom=" + nom);
+			sb.append(",prenom=" + prenom);
+			sb.append(",email=" + email);
+			sb.append(",ville=" + ville);
+			sb.append(",statut=" + statut);
+			sb.append("]");
+
+			return sb.toString();
+		}
+
+		/**
+		 * Compare keys
+		 */
+		public int compareTo(row4Struct other) {
+
+			int returnValue = -1;
+
+			return returnValue;
+		}
+
+		private int checkNullsAndCompare(Object object1, Object object2) {
+			int returnValue = 0;
+			if (object1 instanceof Comparable && object2 instanceof Comparable) {
+				returnValue = ((Comparable) object1).compareTo(object2);
+			} else if (object1 != null && object2 != null) {
+				returnValue = compareStrings(object1.toString(), object2.toString());
+			} else if (object1 == null && object2 != null) {
+				returnValue = 1;
+			} else if (object1 != null && object2 == null) {
+				returnValue = -1;
+			} else {
+				returnValue = 0;
+			}
+
+			return returnValue;
+		}
+
+		private int compareStrings(String string1, String string2) {
+			return string1.compareTo(string2);
+		}
+
+	}
+
+	public static class out1Struct implements routines.system.IPersistableRow<out1Struct> {
+		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
+		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
+
+		public Integer id;
+
+		public Integer getId() {
+			return this.id;
+		}
+
+		public String nom;
+
+		public String getNom() {
+			return this.nom;
+		}
+
+		public String prenom;
+
+		public String getPrenom() {
+			return this.prenom;
+		}
+
+		public String email;
+
+		public String getEmail() {
+			return this.email;
+		}
+
+		public String ville;
+
+		public String getVille() {
+			return this.ville;
+		}
+
+		public String statut;
+
+		public String getStatut() {
+			return this.statut;
+		}
+
+		private Integer readInteger(ObjectInputStream dis) throws IOException {
+			Integer intReturn;
+			int length = 0;
+			length = dis.readByte();
+			if (length == -1) {
+				intReturn = null;
+			} else {
+				intReturn = dis.readInt();
+			}
+			return intReturn;
+		}
+
+		private void writeInteger(Integer intNum, ObjectOutputStream dos) throws IOException {
+			if (intNum == null) {
+				dos.writeByte(-1);
+			} else {
+				dos.writeByte(0);
+				dos.writeInt(intNum);
+			}
+		}
+
+		private String readString(ObjectInputStream dis) throws IOException {
+			String strReturn = null;
+			int length = 0;
+			length = dis.readInt();
+			if (length == -1) {
+				strReturn = null;
+			} else {
+				if (length > commonByteArray_API_CLIENT_F011_API.length) {
+					if (length < 1024 && commonByteArray_API_CLIENT_F011_API.length == 0) {
+						commonByteArray_API_CLIENT_F011_API = new byte[1024];
+					} else {
+						commonByteArray_API_CLIENT_F011_API = new byte[2 * length];
+					}
+				}
+				dis.readFully(commonByteArray_API_CLIENT_F011_API, 0, length);
+				strReturn = new String(commonByteArray_API_CLIENT_F011_API, 0, length, utf8Charset);
+			}
+			return strReturn;
+		}
+
+		private void writeString(String str, ObjectOutputStream dos) throws IOException {
+			if (str == null) {
+				dos.writeInt(-1);
+			} else {
+				byte[] byteArray = str.getBytes(utf8Charset);
+				dos.writeInt(byteArray.length);
+				dos.write(byteArray);
+			}
+		}
+
+		public void readData(ObjectInputStream dis) {
+
+			synchronized (commonByteArrayLock_API_CLIENT_F011_API) {
+
+				try {
+
+					int length = 0;
+
+					this.id = readInteger(dis);
+
+					this.nom = readString(dis);
+
+					this.prenom = readString(dis);
+
+					this.email = readString(dis);
+
+					this.ville = readString(dis);
+
+					this.statut = readString(dis);
+
+				} catch (IOException e) {
+					throw new RuntimeException(e);
+
+				}
+
+			}
+
+		}
+
+		public void writeData(ObjectOutputStream dos) {
+			try {
+
+				// Integer
+
+				writeInteger(this.id, dos);
+
+				// String
+
+				writeString(this.nom, dos);
+
+				// String
+
+				writeString(this.prenom, dos);
+
+				// String
+
+				writeString(this.email, dos);
+
+				// String
+
+				writeString(this.ville, dos);
+
+				// String
+
+				writeString(this.statut, dos);
+
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+		}
+
+		public String toString() {
+
+			StringBuilder sb = new StringBuilder();
+			sb.append(super.toString());
+			sb.append("[");
+			sb.append("id=" + String.valueOf(id));
+			sb.append(",nom=" + nom);
+			sb.append(",prenom=" + prenom);
+			sb.append(",email=" + email);
+			sb.append(",ville=" + ville);
+			sb.append(",statut=" + statut);
 			sb.append("]");
 
 			return sb.toString();
@@ -592,7 +1560,7 @@ public class F011_API implements TalendJob {
 
 	}
 
-	public static class row4Struct implements routines.system.IPersistableComparableLookupRow<row4Struct> {
+	public static class row_csvStruct implements routines.system.IPersistableComparableLookupRow<row_csvStruct> {
 		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
 		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
 		protected static final int DEFAULT_HASHCODE = 1;
@@ -654,7 +1622,7 @@ public class F011_API implements TalendJob {
 				return false;
 			if (getClass() != obj.getClass())
 				return false;
-			final row4Struct other = (row4Struct) obj;
+			final row_csvStruct other = (row_csvStruct) obj;
 
 			if (this.id == null) {
 				if (other.id != null)
@@ -667,7 +1635,7 @@ public class F011_API implements TalendJob {
 			return true;
 		}
 
-		public void copyDataTo(row4Struct other) {
+		public void copyDataTo(row_csvStruct other) {
 
 			other.id = this.id;
 			other.nom = this.nom;
@@ -677,7 +1645,7 @@ public class F011_API implements TalendJob {
 
 		}
 
-		public void copyKeysDataTo(row4Struct other) {
+		public void copyKeysDataTo(row_csvStruct other) {
 
 			other.id = this.id;
 
@@ -821,7 +1789,7 @@ public class F011_API implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row4Struct other) {
+		public int compareTo(row_csvStruct other) {
 
 			int returnValue = -1;
 
@@ -1258,8 +2226,177 @@ public class F011_API implements TalendJob {
 				tRESTClient_1Process(globalMap);
 
 				row3Struct row3 = new row3Struct();
-				row3Struct row4 = row3;
+				row3Struct row_csv = row3;
 				out1Struct out1 = new out1Struct();
+				row4Struct row4 = new row4Struct();
+				row6Struct row6 = new row6Struct();
+				xmloutputStruct xmloutput = new xmloutputStruct();
+				row7Struct row7 = new row7Struct();
+				row7Struct row8 = row7;
+				row9Struct row9 = new row9Struct();
+
+				/**
+				 * [tLogRow_4 begin ] start
+				 */
+
+				ok_Hash.put("tLogRow_4", false);
+				start_Hash.put("tLogRow_4", System.currentTimeMillis());
+
+				currentComponent = "tLogRow_4";
+
+				if (execStat) {
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row9");
+				}
+
+				int tos_count_tLogRow_4 = 0;
+
+				///////////////////////
+
+				class Util_tLogRow_4 {
+
+					String[] des_top = { ".", ".", "-", "+" };
+
+					String[] des_head = { "|=", "=|", "-", "+" };
+
+					String[] des_bottom = { "'", "'", "-", "+" };
+
+					String name = "";
+
+					java.util.List<String[]> list = new java.util.ArrayList<String[]>();
+
+					int[] colLengths = new int[3];
+
+					public void addRow(String[] row) {
+
+						for (int i = 0; i < 3; i++) {
+							if (row[i] != null) {
+								colLengths[i] = Math.max(colLengths[i], row[i].length());
+							}
+						}
+						list.add(row);
+					}
+
+					public void setTableName(String name) {
+
+						this.name = name;
+					}
+
+					public StringBuilder format() {
+
+						StringBuilder sb = new StringBuilder();
+
+						sb.append(print(des_top));
+
+						int totals = 0;
+						for (int i = 0; i < colLengths.length; i++) {
+							totals = totals + colLengths[i];
+						}
+
+						// name
+						sb.append("|");
+						int k = 0;
+						for (k = 0; k < (totals + 2 - name.length()) / 2; k++) {
+							sb.append(' ');
+						}
+						sb.append(name);
+						for (int i = 0; i < totals + 2 - name.length() - k; i++) {
+							sb.append(' ');
+						}
+						sb.append("|\n");
+
+						// head and rows
+						sb.append(print(des_head));
+						for (int i = 0; i < list.size(); i++) {
+
+							String[] row = list.get(i);
+
+							java.util.Formatter formatter = new java.util.Formatter(new StringBuilder());
+
+							StringBuilder sbformat = new StringBuilder();
+							sbformat.append("|%1$-");
+							sbformat.append(colLengths[0]);
+							sbformat.append("s");
+
+							sbformat.append("|%2$-");
+							sbformat.append(colLengths[1]);
+							sbformat.append("s");
+
+							sbformat.append("|%3$-");
+							sbformat.append(colLengths[2]);
+							sbformat.append("s");
+
+							sbformat.append("|\n");
+
+							formatter.format(sbformat.toString(), (Object[]) row);
+
+							sb.append(formatter.toString());
+							if (i == 0)
+								sb.append(print(des_head)); // print the head
+						}
+
+						// end
+						sb.append(print(des_bottom));
+						return sb;
+					}
+
+					private StringBuilder print(String[] fillChars) {
+						StringBuilder sb = new StringBuilder();
+						// first column
+						sb.append(fillChars[0]);
+						for (int i = 0; i < colLengths[0] - fillChars[0].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+
+						for (int i = 0; i < colLengths[1] - fillChars[3].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[3]);
+
+						// last column
+						for (int i = 0; i < colLengths[2] - fillChars[1].length() + 1; i++) {
+							sb.append(fillChars[2]);
+						}
+						sb.append(fillChars[1]);
+						sb.append("\n");
+						return sb;
+					}
+
+					public boolean isTableEmpty() {
+						if (list.size() > 1)
+							return false;
+						return true;
+					}
+				}
+				Util_tLogRow_4 util_tLogRow_4 = new Util_tLogRow_4();
+				util_tLogRow_4.setTableName("tLogRow_4");
+				util_tLogRow_4.addRow(new String[] { "statusCode", "body", "string", });
+				StringBuilder strBuffer_tLogRow_4 = null;
+				int nb_line_tLogRow_4 = 0;
+///////////////////////    			
+
+				/**
+				 * [tLogRow_4 begin ] stop
+				 */
+
+				/**
+				 * [tRESTClient_2 begin ] start
+				 */
+
+				ok_Hash.put("tRESTClient_2", false);
+				start_Hash.put("tRESTClient_2", System.currentTimeMillis());
+
+				currentComponent = "tRESTClient_2";
+
+				if (execStat) {
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row8");
+				}
+
+				int tos_count_tRESTClient_2 = 0;
+
+				/**
+				 * [tRESTClient_2 begin ] stop
+				 */
 
 				/**
 				 * [tLogRow_3 begin ] start
@@ -1271,7 +2408,7 @@ public class F011_API implements TalendJob {
 				currentComponent = "tLogRow_3";
 
 				if (execStat) {
-					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "out1");
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row7");
 				}
 
 				int tos_count_tLogRow_3 = 0;
@@ -1290,6 +2427,268 @@ public class F011_API implements TalendJob {
 				 */
 
 				/**
+				 * [tJavaRow_1 begin ] start
+				 */
+
+				ok_Hash.put("tJavaRow_1", false);
+				start_Hash.put("tJavaRow_1", System.currentTimeMillis());
+
+				currentComponent = "tJavaRow_1";
+
+				if (execStat) {
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "xmloutput");
+				}
+
+				int tos_count_tJavaRow_1 = 0;
+
+				int nb_line_tJavaRow_1 = 0;
+
+				/**
+				 * [tJavaRow_1 begin ] stop
+				 */
+
+				/**
+				 * [tXMLMap_1 begin ] start
+				 */
+
+				ok_Hash.put("tXMLMap_1", false);
+				start_Hash.put("tXMLMap_1", System.currentTimeMillis());
+
+				currentComponent = "tXMLMap_1";
+
+				if (execStat) {
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row6");
+				}
+
+				int tos_count_tXMLMap_1 = 0;
+
+//===============================input xml init part===============================
+				class XML_API_tXMLMap_1 {
+					public boolean isDefNull(org.dom4j.Node node) throws javax.xml.transform.TransformerException {
+						if (node != null && node instanceof org.dom4j.Element) {
+							org.dom4j.Attribute attri = ((org.dom4j.Element) node).attribute("nil");
+							if (attri != null && ("true").equals(attri.getText())) {
+								return true;
+							}
+						}
+						return false;
+					}
+
+					public boolean isMissing(org.dom4j.Node node) throws javax.xml.transform.TransformerException {
+						return node == null ? true : false;
+					}
+
+					public boolean isEmpty(org.dom4j.Node node) throws javax.xml.transform.TransformerException {
+						if (node != null) {
+							return node.getText().length() == 0;
+						}
+						return false;
+					}
+				}
+				class Var__tXMLMap_1__Struct {
+				}
+				Var__tXMLMap_1__Struct Var__tXMLMap_1 = new Var__tXMLMap_1__Struct();
+// ###############################
+// # Outputs initialization
+				xmloutputStruct xmloutput_tmp = new xmloutputStruct();
+				xmloutputStruct xmloutput_save = null;
+// ###############################
+				int nb_line_tXMLMap_1 = 0;
+
+				XML_API_tXMLMap_1 xml_api_tXMLMap_1 = new XML_API_tXMLMap_1();
+
+				class GenerateDocument_xmloutput {
+
+					java.util.Map<String, Object> valueMap = null;
+
+					routines.system.DocumentGenerateOrderHelper orderHelper = new routines.system.DocumentGenerateOrderHelper(
+							1);
+
+					org.dom4j.Document doc = null;
+
+					org.dom4j.Element root4Group = null;
+
+					org.dom4j.io.OutputFormat format = null;
+
+					java.util.List<java.util.List<String>> groupbyList = null;
+					java.util.List<org.dom4j.Element> groupElementList = null;
+					int order = 0;
+
+					boolean isFirst = true;
+
+					boolean needRoot = true;
+
+					String currentValue = null;
+
+					public GenerateDocument_xmloutput() {
+//    	this.treeNodeAPI = treeNodeAPI;
+
+						valueMap = new java.util.HashMap<String, Object>();
+
+						groupbyList = new java.util.ArrayList<java.util.List<String>>();
+						groupElementList = new java.util.ArrayList<org.dom4j.Element>();
+
+						doc = org.dom4j.DocumentHelper.createDocument();
+						format = org.dom4j.io.OutputFormat.createPrettyPrint();
+						format.setTrimText(false);
+					}
+
+					public org.dom4j.Document getDocument() {
+						generateOk();
+						return this.doc;
+					}
+
+					// do some work after document has been generated
+					private void generateOk() {
+						routines.system.NestXMLTool.replaceDefaultNameSpace(this.doc.getRootElement(), null);
+					}
+
+					// We generate the TreeNode_API object only if there is a document in the main
+					// input table.
+					void generateElements(boolean isInnerJoin, row6Struct row6, Var__tXMLMap_1__Struct Var) {
+
+						/*
+						 * if(this.treeNodeAPI==null) { this.treeNodeAPI = treeNodeAPI; }
+						 */
+
+						org.dom4j.Element subTreeRootParent = null;
+// build root xml tree 
+						if (needRoot) {
+							needRoot = false;
+							org.dom4j.Element root = null;
+							root = org.dom4j.DocumentHelper.createElement("root");
+							doc.add(root);
+							subTreeRootParent = root;
+							org.dom4j.Element root_0 = null;
+							root_0 = root.addElement("id");
+							valueMap.put("root_0", row6.id);
+							if (valueMap.get("root_0") != null) {
+								routines.system.NestXMLTool.setText(root_0,
+										FormatterUtils.fm(valueMap.get("root_0"), null));
+							}
+							org.dom4j.Element root_1 = null;
+							root_1 = root.addElement("nom");
+							valueMap.put("root_1", row6.nom);
+							if (valueMap.get("root_1") != null) {
+								routines.system.NestXMLTool.setText(root_1,
+										FormatterUtils.fm(valueMap.get("root_1"), null));
+							}
+							org.dom4j.Element root_2 = null;
+							root_2 = root.addElement("prenom");
+							valueMap.put("root_2", row6.prenom);
+							if (valueMap.get("root_2") != null) {
+								routines.system.NestXMLTool.setText(root_2,
+										FormatterUtils.fm(valueMap.get("root_2"), null));
+							}
+							org.dom4j.Element root_3 = null;
+							root_3 = root.addElement("email");
+							valueMap.put("root_3", row6.email);
+							if (valueMap.get("root_3") != null) {
+								routines.system.NestXMLTool.setText(root_3,
+										FormatterUtils.fm(valueMap.get("root_3"), null));
+							}
+							org.dom4j.Element root_4 = null;
+							root_4 = root.addElement("ville");
+							valueMap.put("root_4", row6.ville);
+							if (valueMap.get("root_4") != null) {
+								routines.system.NestXMLTool.setText(root_4,
+										FormatterUtils.fm(valueMap.get("root_4"), null));
+							}
+							root4Group = subTreeRootParent;
+						} else {
+							subTreeRootParent = root4Group;
+						}
+						/* build group xml tree */
+						boolean isNewElement = false;
+						isNewElement = false;
+					}
+				}
+
+				/**
+				 * [tXMLMap_1 begin ] stop
+				 */
+
+				/**
+				 * [tFilterRow_1 begin ] start
+				 */
+
+				ok_Hash.put("tFilterRow_1", false);
+				start_Hash.put("tFilterRow_1", System.currentTimeMillis());
+
+				currentComponent = "tFilterRow_1";
+
+				if (execStat) {
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row4");
+				}
+
+				int tos_count_tFilterRow_1 = 0;
+
+				int nb_line_tFilterRow_1 = 0;
+				int nb_line_ok_tFilterRow_1 = 0;
+				int nb_line_reject_tFilterRow_1 = 0;
+
+				class Operator_tFilterRow_1 {
+					private String sErrorMsg = "";
+					private boolean bMatchFlag = true;
+					private String sUnionFlag = "&&";
+
+					public Operator_tFilterRow_1(String unionFlag) {
+						sUnionFlag = unionFlag;
+						bMatchFlag = "||".equals(unionFlag) ? false : true;
+					}
+
+					public String getErrorMsg() {
+						if (sErrorMsg != null && sErrorMsg.length() > 1)
+							return sErrorMsg.substring(1);
+						else
+							return null;
+					}
+
+					public boolean getMatchFlag() {
+						return bMatchFlag;
+					}
+
+					public void matches(boolean partMatched, String reason) {
+						// no need to care about the next judgement
+						if ("||".equals(sUnionFlag) && bMatchFlag) {
+							return;
+						}
+
+						if (!partMatched) {
+							sErrorMsg += "|" + reason;
+						}
+
+						if ("||".equals(sUnionFlag))
+							bMatchFlag = bMatchFlag || partMatched;
+						else
+							bMatchFlag = bMatchFlag && partMatched;
+					}
+				}
+
+				/**
+				 * [tFilterRow_1 begin ] stop
+				 */
+
+				/**
+				 * [tReplicate_1 begin ] start
+				 */
+
+				ok_Hash.put("tReplicate_1", false);
+				start_Hash.put("tReplicate_1", System.currentTimeMillis());
+
+				currentComponent = "tReplicate_1";
+
+				if (execStat) {
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "out1");
+				}
+
+				int tos_count_tReplicate_1 = 0;
+
+				/**
+				 * [tReplicate_1 begin ] stop
+				 */
+
+				/**
 				 * [tMap_1 begin ] start
 				 */
 
@@ -1299,7 +2698,7 @@ public class F011_API implements TalendJob {
 				currentComponent = "tMap_1";
 
 				if (execStat) {
-					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row4");
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row_csv");
 				}
 
 				int tos_count_tMap_1 = 0;
@@ -1307,11 +2706,11 @@ public class F011_API implements TalendJob {
 // ###############################
 // # Lookup's keys initialization
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row5Struct> tHash_Lookup_row5 = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row5Struct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row5Struct>) globalMap
-						.get("tHash_Lookup_row5"));
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row_apiStruct> tHash_Lookup_row_api = (org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row_apiStruct>) ((org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row_apiStruct>) globalMap
+						.get("tHash_Lookup_row_api"));
 
-				row5Struct row5HashKey = new row5Struct();
-				row5Struct row5Default = new row5Struct();
+				row_apiStruct row_apiHashKey = new row_apiStruct();
+				row_apiStruct row_apiDefault = new row_apiStruct();
 // ###############################        
 
 // ###############################
@@ -1486,7 +2885,7 @@ public class F011_API implements TalendJob {
 								runStat.updateStatOnConnection(iterateId, 1, 1, "row3");
 							}
 
-							row4 = row3;
+							row_csv = row3;
 
 							tos_count_tLogRow_2++;
 
@@ -1511,7 +2910,7 @@ public class F011_API implements TalendJob {
 							currentComponent = "tMap_1";
 
 							if (execStat) {
-								runStat.updateStatOnConnection(iterateId, 1, 1, "row4");
+								runStat.updateStatOnConnection(iterateId, 1, 1, "row_csv");
 							}
 
 							boolean hasCasePrimitiveKeyWithNull_tMap_1 = false;
@@ -1522,45 +2921,46 @@ public class F011_API implements TalendJob {
 							boolean mainRowRejected_tMap_1 = false;
 
 							///////////////////////////////////////////////
-							// Starting Lookup Table "row5"
+							// Starting Lookup Table "row_api"
 							///////////////////////////////////////////////
 
-							boolean forceLooprow5 = false;
+							boolean forceLooprow_api = false;
 
-							row5Struct row5ObjectFromLookup = null;
+							row_apiStruct row_apiObjectFromLookup = null;
 
 							if (!rejectedInnerJoin_tMap_1) { // G_TM_M_020
 
 								hasCasePrimitiveKeyWithNull_tMap_1 = false;
 
-								row5HashKey.id = row4.id;
+								row_apiHashKey.id = row_csv.id;
 
-								row5HashKey.hashCodeDirty = true;
+								row_apiHashKey.hashCodeDirty = true;
 
-								tHash_Lookup_row5.lookup(row5HashKey);
+								tHash_Lookup_row_api.lookup(row_apiHashKey);
 
 							} // G_TM_M_020
 
-							if (tHash_Lookup_row5 != null && tHash_Lookup_row5.getCount(row5HashKey) > 1) { // G 071
+							if (tHash_Lookup_row_api != null && tHash_Lookup_row_api.getCount(row_apiHashKey) > 1) { // G
+																														// 071
 
-								// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup 'row5'
-								// and it contains more one result from keys : row5.id = '" + row5HashKey.id +
-								// "'");
+								// System.out.println("WARNING: UNIQUE MATCH is configured for the lookup
+								// 'row_api' and it contains more one result from keys : row_api.id = '" +
+								// row_apiHashKey.id + "'");
 							} // G 071
 
-							row5Struct row5 = null;
+							row_apiStruct row_api = null;
 
-							row5Struct fromLookup_row5 = null;
-							row5 = row5Default;
+							row_apiStruct fromLookup_row_api = null;
+							row_api = row_apiDefault;
 
-							if (tHash_Lookup_row5 != null && tHash_Lookup_row5.hasNext()) { // G 099
+							if (tHash_Lookup_row_api != null && tHash_Lookup_row_api.hasNext()) { // G 099
 
-								fromLookup_row5 = tHash_Lookup_row5.next();
+								fromLookup_row_api = tHash_Lookup_row_api.next();
 
 							} // G 099
 
-							if (fromLookup_row5 != null) {
-								row5 = fromLookup_row5;
+							if (fromLookup_row_api != null) {
+								row_api = fromLookup_row_api;
 							}
 
 							// ###############################
@@ -1576,11 +2976,15 @@ public class F011_API implements TalendJob {
 								out1 = null;
 
 // # Output table : 'out1'
-								out1_tmp.id = row5.id;
-								out1_tmp.nom = row5.nom;
-								out1_tmp.prenom = row5.prenom;
-								out1_tmp.email = row5.email;
-								out1_tmp.ville = row5.ville;
+								out1_tmp.id = row_csv.id;
+								out1_tmp.nom = row_csv.nom;
+								out1_tmp.prenom = row_csv.prenom;
+								out1_tmp.email = row_csv.email;
+								out1_tmp.ville = row_csv.ville;
+								out1_tmp.statut = (row_api.id == null) ? "NOUVEAU"
+										: (!row_csv.email.equals(row_api.email) || !row_csv.nom.equals(row_api.nom)
+												|| !row_csv.prenom.equals(row_api.prenom)
+												|| !row_csv.ville.equals(row_api.ville)) ? "MODIFIE" : "IDENTIQUE";
 								out1 = out1_tmp;
 // ###############################
 
@@ -1607,97 +3011,589 @@ public class F011_API implements TalendJob {
 							if (out1 != null) {
 
 								/**
-								 * [tLogRow_3 main ] start
+								 * [tReplicate_1 main ] start
 								 */
 
-								currentComponent = "tLogRow_3";
+								currentComponent = "tReplicate_1";
 
 								if (execStat) {
 									runStat.updateStatOnConnection(iterateId, 1, 1, "out1");
 								}
 
+								row4 = new row4Struct();
+
+								row4.id = out1.id;
+								row4.nom = out1.nom;
+								row4.prenom = out1.prenom;
+								row4.email = out1.email;
+								row4.ville = out1.ville;
+								row4.statut = out1.statut;
+
+								tos_count_tReplicate_1++;
+
+								/**
+								 * [tReplicate_1 main ] stop
+								 */
+
+								/**
+								 * [tReplicate_1 process_data_begin ] start
+								 */
+
+								currentComponent = "tReplicate_1";
+
+								/**
+								 * [tReplicate_1 process_data_begin ] stop
+								 */
+
+								/**
+								 * [tFilterRow_1 main ] start
+								 */
+
+								currentComponent = "tFilterRow_1";
+
+								if (execStat) {
+									runStat.updateStatOnConnection(iterateId, 1, 1, "row4");
+								}
+
+								row6 = null;
+								Operator_tFilterRow_1 ope_tFilterRow_1 = new Operator_tFilterRow_1("&&");
+								ope_tFilterRow_1.matches(
+										(row4.statut == null ? false : row4.statut.compareTo("NOUVEAU") == 0),
+										"statut.compareTo(\"NOUVEAU\") == 0 failed");
+
+								if (ope_tFilterRow_1.getMatchFlag()) {
+									if (row6 == null) {
+										row6 = new row6Struct();
+									}
+									row6.id = row4.id;
+									row6.nom = row4.nom;
+									row6.prenom = row4.prenom;
+									row6.email = row4.email;
+									row6.ville = row4.ville;
+									row6.statut = row4.statut;
+									nb_line_ok_tFilterRow_1++;
+								} else {
+									nb_line_reject_tFilterRow_1++;
+								}
+
+								nb_line_tFilterRow_1++;
+
+								tos_count_tFilterRow_1++;
+
+								/**
+								 * [tFilterRow_1 main ] stop
+								 */
+
+								/**
+								 * [tFilterRow_1 process_data_begin ] start
+								 */
+
+								currentComponent = "tFilterRow_1";
+
+								/**
+								 * [tFilterRow_1 process_data_begin ] stop
+								 */
+// Start of branch "row6"
+								if (row6 != null) {
+
+									/**
+									 * [tXMLMap_1 main ] start
+									 */
+
+									currentComponent = "tXMLMap_1";
+
+									if (execStat) {
+										runStat.updateStatOnConnection(iterateId, 1, 1, "row6");
+									}
+
+									boolean rejectedInnerJoin_tXMLMap_1 = false;
+									boolean rejectedDocInnerJoin_tXMLMap_1 = false;
+									boolean mainRowRejected_tXMLMap_1 = false;
+									boolean isMatchDocRowtXMLMap_1 = false;
+
+									GenerateDocument_xmloutput gen_Doc_xmloutput_tXMLMap_1 = new GenerateDocument_xmloutput();
+									xmloutput_tmp.newColumn = null;
+
+									{ // start of Var scope
+
+										// ###############################
+										// # Vars tables
+
+										Var__tXMLMap_1__Struct Var = Var__tXMLMap_1;
+										// ###############################
+										// # Output tables
+
+										xmloutput = null;
+
+// # Output table : 'xmloutput'
+
+										gen_Doc_xmloutput_tXMLMap_1.generateElements(rejectedDocInnerJoin_tXMLMap_1,
+												row6, Var);
+
+										if (xmloutput_tmp.newColumn == null) {
+											xmloutput_tmp.newColumn = new routines.system.Document();
+											xmloutput_tmp.newColumn
+													.setDocument(gen_Doc_xmloutput_tXMLMap_1.getDocument());
+										}
+
+										xmloutput = xmloutput_tmp;
+										xmloutput_save = xmloutput_tmp;
+// ###############################
+
+									} // end of Var scope
+
+									rejectedInnerJoin_tXMLMap_1 = false;
+
+									tos_count_tXMLMap_1++;
+
+									/**
+									 * [tXMLMap_1 main ] stop
+									 */
+
+									/**
+									 * [tXMLMap_1 process_data_begin ] start
+									 */
+
+									currentComponent = "tXMLMap_1";
+
+									/**
+									 * [tXMLMap_1 process_data_begin ] stop
+									 */
+// Start of branch "xmloutput"
+									if (xmloutput != null) {
+
+										/**
+										 * [tJavaRow_1 main ] start
+										 */
+
+										currentComponent = "tJavaRow_1";
+
+										if (execStat) {
+											runStat.updateStatOnConnection(iterateId, 1, 1, "xmloutput");
+										}
+
+										// Convertit le Document XML en String
+										String xmlString = xmloutput.newColumn.toString();
+
+// Convertit le XML en JSON via la routine
+										row7.body = JsonBuilder.fromXml(xmlString);
+
+										nb_line_tJavaRow_1++;
+
+										tos_count_tJavaRow_1++;
+
+										/**
+										 * [tJavaRow_1 main ] stop
+										 */
+
+										/**
+										 * [tJavaRow_1 process_data_begin ] start
+										 */
+
+										currentComponent = "tJavaRow_1";
+
+										/**
+										 * [tJavaRow_1 process_data_begin ] stop
+										 */
+
+										/**
+										 * [tLogRow_3 main ] start
+										 */
+
+										currentComponent = "tLogRow_3";
+
+										if (execStat) {
+											runStat.updateStatOnConnection(iterateId, 1, 1, "row7");
+										}
+
 ///////////////////////		
 
-								strBuffer_tLogRow_3 = new StringBuilder();
+										strBuffer_tLogRow_3 = new StringBuilder();
 
-								if (out1.id != null) { //
+										if (row7.body != null) { //
 
-									strBuffer_tLogRow_3.append(String.valueOf(out1.id));
+											strBuffer_tLogRow_3.append(String.valueOf(row7.body));
 
-								} //
+										} //
 
-								strBuffer_tLogRow_3.append("|");
-
-								if (out1.nom != null) { //
-
-									strBuffer_tLogRow_3.append(String.valueOf(out1.nom));
-
-								} //
-
-								strBuffer_tLogRow_3.append("|");
-
-								if (out1.prenom != null) { //
-
-									strBuffer_tLogRow_3.append(String.valueOf(out1.prenom));
-
-								} //
-
-								strBuffer_tLogRow_3.append("|");
-
-								if (out1.email != null) { //
-
-									strBuffer_tLogRow_3.append(String.valueOf(out1.email));
-
-								} //
-
-								strBuffer_tLogRow_3.append("|");
-
-								if (out1.ville != null) { //
-
-									strBuffer_tLogRow_3.append(String.valueOf(out1.ville));
-
-								} //
-
-								if (globalMap.get("tLogRow_CONSOLE") != null) {
-									consoleOut_tLogRow_3 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
-								} else {
-									consoleOut_tLogRow_3 = new java.io.PrintStream(
-											new java.io.BufferedOutputStream(System.out));
-									globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_3);
-								}
-								consoleOut_tLogRow_3.println(strBuffer_tLogRow_3.toString());
-								consoleOut_tLogRow_3.flush();
-								nb_line_tLogRow_3++;
+										if (globalMap.get("tLogRow_CONSOLE") != null) {
+											consoleOut_tLogRow_3 = (java.io.PrintStream) globalMap
+													.get("tLogRow_CONSOLE");
+										} else {
+											consoleOut_tLogRow_3 = new java.io.PrintStream(
+													new java.io.BufferedOutputStream(System.out));
+											globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_3);
+										}
+										consoleOut_tLogRow_3.println(strBuffer_tLogRow_3.toString());
+										consoleOut_tLogRow_3.flush();
+										nb_line_tLogRow_3++;
 //////
 
 //////                    
 
 ///////////////////////    			
 
-								tos_count_tLogRow_3++;
+										row8 = row7;
+
+										tos_count_tLogRow_3++;
+
+										/**
+										 * [tLogRow_3 main ] stop
+										 */
+
+										/**
+										 * [tLogRow_3 process_data_begin ] start
+										 */
+
+										currentComponent = "tLogRow_3";
+
+										/**
+										 * [tLogRow_3 process_data_begin ] stop
+										 */
+
+										/**
+										 * [tRESTClient_2 main ] start
+										 */
+
+										currentComponent = "tRESTClient_2";
+
+										if (execStat) {
+											runStat.updateStatOnConnection(iterateId, 1, 1, "row8");
+										}
+
+										row9 = null;
+
+// expected response body
+										javax.ws.rs.core.Response responseDoc_tRESTClient_2 = null;
+
+										try {
+											// request body
+											org.dom4j.Document requestDoc_tRESTClient_2 = null;
+											String requestString_tRESTClient_2 = null;
+
+											Object requestBody_tRESTClient_2 = requestDoc_tRESTClient_2 != null
+													? requestDoc_tRESTClient_2
+													: requestString_tRESTClient_2;
+
+											// resposne class name
+											Class<?> responseClass_tRESTClient_2 = org.dom4j.Document.class;
+
+											// create web client instance
+											org.apache.cxf.jaxrs.client.JAXRSClientFactoryBean factoryBean_tRESTClient_2 = new org.apache.cxf.jaxrs.client.JAXRSClientFactoryBean();
+
+											boolean inOSGi = routines.system.BundleUtils.inOSGi();
+
+											final java.util.List<org.apache.cxf.feature.Feature> features_tRESTClient_2 = new java.util.ArrayList<org.apache.cxf.feature.Feature>();
+
+											String url = context.api_url + "/clients";
+											// {baseUri}tRESTClient
+											factoryBean_tRESTClient_2
+													.setServiceName(new javax.xml.namespace.QName(url, "tRESTClient"));
+											factoryBean_tRESTClient_2.setAddress(url);
+
+											factoryBean_tRESTClient_2.setFeatures(features_tRESTClient_2);
+
+											java.util.List<Object> providers_tRESTClient_2 = new java.util.ArrayList<Object>();
+											providers_tRESTClient_2
+													.add(new org.apache.cxf.jaxrs.provider.dom4j.DOM4JProvider() {
+														// workaround for https://jira.talendforge.org/browse/TESB-7276
+														public org.dom4j.Document readFrom(
+																Class<org.dom4j.Document> cls,
+																java.lang.reflect.Type type,
+																java.lang.annotation.Annotation[] anns,
+																javax.ws.rs.core.MediaType mt,
+																javax.ws.rs.core.MultivaluedMap<String, String> headers,
+																java.io.InputStream is) throws IOException,
+																javax.ws.rs.WebApplicationException {
+															String contentLength = headers.getFirst("Content-Length");
+															if (!org.apache.cxf.common.util.StringUtils
+																	.isEmpty(contentLength)
+																	&& Integer.valueOf(contentLength) <= 0) {
+																try {
+																	return org.dom4j.DocumentHelper
+																			.parseText("<root/>");
+																} catch (org.dom4j.DocumentException e_tRESTClient_2) {
+																	e_tRESTClient_2.printStackTrace();
+																}
+																return null;
+															}
+															return super.readFrom(cls, type, anns, mt, headers, is);
+														}
+													});
+											org.apache.cxf.jaxrs.provider.json.JSONProvider jsonProvider_tRESTClient_2 = new org.apache.cxf.jaxrs.provider.json.JSONProvider();
+											jsonProvider_tRESTClient_2.setIgnoreNamespaces(true);
+											jsonProvider_tRESTClient_2.setAttributesToElements(true);
+
+											jsonProvider_tRESTClient_2.setSupportUnwrapped(true);
+											jsonProvider_tRESTClient_2.setWrapperName("root");
+
+											jsonProvider_tRESTClient_2.setDropRootElement(true);
+											jsonProvider_tRESTClient_2.setConvertTypesToStrings(false);
+											providers_tRESTClient_2.add(jsonProvider_tRESTClient_2);
+											factoryBean_tRESTClient_2.setProviders(providers_tRESTClient_2);
+											factoryBean_tRESTClient_2
+													.setTransportId("http://cxf.apache.org/transports/http");
+
+											boolean use_auth_tRESTClient_2 = false;
+
+											org.apache.cxf.jaxrs.client.WebClient webClient_tRESTClient_2 = factoryBean_tRESTClient_2
+													.createWebClient();
+
+											// set request path
+											webClient_tRESTClient_2.path("");
+
+											// set connection properties
+											org.apache.cxf.jaxrs.client.ClientConfiguration clientConfig_tRESTClient_2 = org.apache.cxf.jaxrs.client.WebClient
+													.getConfig(webClient_tRESTClient_2);
+											org.apache.cxf.transport.http.HTTPConduit conduit_tRESTClient_2 = clientConfig_tRESTClient_2
+													.getHttpConduit();
+
+											if (clientConfig_tRESTClient_2.getEndpoint() != null
+													&& clientConfig_tRESTClient_2.getEndpoint()
+															.getEndpointInfo() != null) {
+												clientConfig_tRESTClient_2.getEndpoint().getEndpointInfo()
+														.setProperty("enable.webclient.operation.reporting", true);
+											}
+
+											org.apache.cxf.configuration.jsse.TLSClientParameters tlsClientParameters_tRESTClient_2 = new org.apache.cxf.configuration.jsse.TLSClientParameters();
+											tlsClientParameters_tRESTClient_2.setDisableCNCheck(true);
+											conduit_tRESTClient_2
+													.setTlsClientParameters(tlsClientParameters_tRESTClient_2);
+
+											if (!inOSGi) {
+												conduit_tRESTClient_2.getClient()
+														.setReceiveTimeout((long) (60 * 1000L));
+												conduit_tRESTClient_2.getClient()
+														.setConnectionTimeout((long) (30 * 1000L));
+												boolean use_proxy_tRESTClient_2 = false;
+
+											}
+
+											// set Content-Type
+											webClient_tRESTClient_2.type("application/json");
+
+											// set Accept-Type
+											webClient_tRESTClient_2.accept("application/json");
+
+											// set optional query and header properties if any
+
+											webClient_tRESTClient_2.header("Content-Type", "application/json");
+
+											if (use_auth_tRESTClient_2 && "OAUTH2_BEARER".equals("BASIC")) {
+												// set oAuth2 bearer token
+												webClient_tRESTClient_2.header("Authorization", "Bearer " + "");
+											}
+
+											// if FORM request then capture query parameters into Form, otherwise set
+											// them as queries
+
+											try {
+												// start send request
+
+												responseDoc_tRESTClient_2 = webClient_tRESTClient_2
+														.post(requestBody_tRESTClient_2);
+
+												int webClientResponseStatus_tRESTClient_2 = webClient_tRESTClient_2
+														.getResponse().getStatus();
+												if (webClientResponseStatus_tRESTClient_2 >= 300) {
+													throw new javax.ws.rs.WebApplicationException(
+															webClient_tRESTClient_2.getResponse());
+												}
+
+												if (row9 == null) {
+													row9 = new row9Struct();
+												}
+
+												row9.statusCode = webClientResponseStatus_tRESTClient_2;
+
+												Object responseObj_tRESTClient_2 = null;
+												if (responseDoc_tRESTClient_2 != null
+														&& responseDoc_tRESTClient_2.hasEntity()) {
+													responseObj_tRESTClient_2 = responseDoc_tRESTClient_2
+															.readEntity(responseClass_tRESTClient_2);
+
+													if (responseObj_tRESTClient_2 != null) {
+														if (responseClass_tRESTClient_2 == String.class) {
+															row9.string = (String) responseObj_tRESTClient_2;
+														} else {
+															routines.system.Document responseTalendDoc_tRESTClient_2 = null;
+															if (null != responseObj_tRESTClient_2) {
+																responseTalendDoc_tRESTClient_2 = new routines.system.Document();
+																responseTalendDoc_tRESTClient_2.setDocument(
+																		(org.dom4j.Document) responseObj_tRESTClient_2);
+															}
+															row9.body = responseTalendDoc_tRESTClient_2;
+														}
+													}
+												}
+
+												globalMap.put("tRESTClient_2_HEADERS",
+														webClient_tRESTClient_2.getResponse().getHeaders());
+
+												// handle "oneway" for PUT, POST and PATCH with empty response payload
+												if (webClientResponseStatus_tRESTClient_2 == 202
+														&& responseObj_tRESTClient_2 == null) {
+													row9.string = "";
+													return;
+												}
+
+											} catch (javax.ws.rs.WebApplicationException ex_tRESTClient_2) {
+
+												throw ex_tRESTClient_2;
+
+											}
+
+										} catch (Exception e_tRESTClient_2) {
+
+											throw new TalendException(e_tRESTClient_2, currentComponent, globalMap);
+
+										}
+
+										tos_count_tRESTClient_2++;
+
+										/**
+										 * [tRESTClient_2 main ] stop
+										 */
+
+										/**
+										 * [tRESTClient_2 process_data_begin ] start
+										 */
+
+										currentComponent = "tRESTClient_2";
+
+										/**
+										 * [tRESTClient_2 process_data_begin ] stop
+										 */
+// Start of branch "row9"
+										if (row9 != null) {
+
+											/**
+											 * [tLogRow_4 main ] start
+											 */
+
+											currentComponent = "tLogRow_4";
+
+											if (execStat) {
+												runStat.updateStatOnConnection(iterateId, 1, 1, "row9");
+											}
+
+///////////////////////		
+
+											String[] row_tLogRow_4 = new String[3];
+
+											if (row9.statusCode != null) { //
+												row_tLogRow_4[0] = String.valueOf(row9.statusCode);
+
+											} //
+
+											if (row9.body != null) { //
+												row_tLogRow_4[1] = String.valueOf(row9.body);
+
+											} //
+
+											if (row9.string != null) { //
+												row_tLogRow_4[2] = String.valueOf(row9.string);
+
+											} //
+
+											util_tLogRow_4.addRow(row_tLogRow_4);
+											nb_line_tLogRow_4++;
+//////
+
+//////                    
+
+///////////////////////    			
+
+											tos_count_tLogRow_4++;
+
+											/**
+											 * [tLogRow_4 main ] stop
+											 */
+
+											/**
+											 * [tLogRow_4 process_data_begin ] start
+											 */
+
+											currentComponent = "tLogRow_4";
+
+											/**
+											 * [tLogRow_4 process_data_begin ] stop
+											 */
+
+											/**
+											 * [tLogRow_4 process_data_end ] start
+											 */
+
+											currentComponent = "tLogRow_4";
+
+											/**
+											 * [tLogRow_4 process_data_end ] stop
+											 */
+
+										} // End of branch "row9"
+
+										/**
+										 * [tRESTClient_2 process_data_end ] start
+										 */
+
+										currentComponent = "tRESTClient_2";
+
+										/**
+										 * [tRESTClient_2 process_data_end ] stop
+										 */
+
+										/**
+										 * [tLogRow_3 process_data_end ] start
+										 */
+
+										currentComponent = "tLogRow_3";
+
+										/**
+										 * [tLogRow_3 process_data_end ] stop
+										 */
+
+										/**
+										 * [tJavaRow_1 process_data_end ] start
+										 */
+
+										currentComponent = "tJavaRow_1";
+
+										/**
+										 * [tJavaRow_1 process_data_end ] stop
+										 */
+
+									} // End of branch "xmloutput"
+
+									/**
+									 * [tXMLMap_1 process_data_end ] start
+									 */
+
+									currentComponent = "tXMLMap_1";
+
+									/**
+									 * [tXMLMap_1 process_data_end ] stop
+									 */
+
+								} // End of branch "row6"
 
 								/**
-								 * [tLogRow_3 main ] stop
+								 * [tFilterRow_1 process_data_end ] start
+								 */
+
+								currentComponent = "tFilterRow_1";
+
+								/**
+								 * [tFilterRow_1 process_data_end ] stop
 								 */
 
 								/**
-								 * [tLogRow_3 process_data_begin ] start
+								 * [tReplicate_1 process_data_end ] start
 								 */
 
-								currentComponent = "tLogRow_3";
+								currentComponent = "tReplicate_1";
 
 								/**
-								 * [tLogRow_3 process_data_begin ] stop
-								 */
-
-								/**
-								 * [tLogRow_3 process_data_end ] start
-								 */
-
-								currentComponent = "tLogRow_3";
-
-								/**
-								 * [tLogRow_3 process_data_end ] stop
+								 * [tReplicate_1 process_data_end ] stop
 								 */
 
 							} // End of branch "out1"
@@ -1785,15 +3681,15 @@ public class F011_API implements TalendJob {
 
 // ###############################
 // # Lookup hashes releasing
-				if (tHash_Lookup_row5 != null) {
-					tHash_Lookup_row5.endGet();
+				if (tHash_Lookup_row_api != null) {
+					tHash_Lookup_row_api.endGet();
 				}
-				globalMap.remove("tHash_Lookup_row5");
+				globalMap.remove("tHash_Lookup_row_api");
 
 // ###############################      
 
 				if (execStat) {
-					runStat.updateStat(resourceMap, iterateId, 2, 0, "row4");
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row_csv");
 				}
 
 				ok_Hash.put("tMap_1", true);
@@ -1801,6 +3697,79 @@ public class F011_API implements TalendJob {
 
 				/**
 				 * [tMap_1 end ] stop
+				 */
+
+				/**
+				 * [tReplicate_1 end ] start
+				 */
+
+				currentComponent = "tReplicate_1";
+
+				if (execStat) {
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "out1");
+				}
+
+				ok_Hash.put("tReplicate_1", true);
+				end_Hash.put("tReplicate_1", System.currentTimeMillis());
+
+				/**
+				 * [tReplicate_1 end ] stop
+				 */
+
+				/**
+				 * [tFilterRow_1 end ] start
+				 */
+
+				currentComponent = "tFilterRow_1";
+
+				globalMap.put("tFilterRow_1_NB_LINE", nb_line_tFilterRow_1);
+				globalMap.put("tFilterRow_1_NB_LINE_OK", nb_line_ok_tFilterRow_1);
+				globalMap.put("tFilterRow_1_NB_LINE_REJECT", nb_line_reject_tFilterRow_1);
+
+				if (execStat) {
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row4");
+				}
+
+				ok_Hash.put("tFilterRow_1", true);
+				end_Hash.put("tFilterRow_1", System.currentTimeMillis());
+
+				/**
+				 * [tFilterRow_1 end ] stop
+				 */
+
+				/**
+				 * [tXMLMap_1 end ] start
+				 */
+
+				currentComponent = "tXMLMap_1";
+
+				if (execStat) {
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row6");
+				}
+
+				ok_Hash.put("tXMLMap_1", true);
+				end_Hash.put("tXMLMap_1", System.currentTimeMillis());
+
+				/**
+				 * [tXMLMap_1 end ] stop
+				 */
+
+				/**
+				 * [tJavaRow_1 end ] start
+				 */
+
+				currentComponent = "tJavaRow_1";
+
+				globalMap.put("tJavaRow_1_NB_LINE", nb_line_tJavaRow_1);
+				if (execStat) {
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "xmloutput");
+				}
+
+				ok_Hash.put("tJavaRow_1", true);
+				end_Hash.put("tJavaRow_1", System.currentTimeMillis());
+
+				/**
+				 * [tJavaRow_1 end ] stop
 				 */
 
 				/**
@@ -1816,7 +3785,7 @@ public class F011_API implements TalendJob {
 ///////////////////////    			
 
 				if (execStat) {
-					runStat.updateStat(resourceMap, iterateId, 2, 0, "out1");
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row7");
 				}
 
 				ok_Hash.put("tLogRow_3", true);
@@ -1824,6 +3793,62 @@ public class F011_API implements TalendJob {
 
 				/**
 				 * [tLogRow_3 end ] stop
+				 */
+
+				/**
+				 * [tRESTClient_2 end ] start
+				 */
+
+				currentComponent = "tRESTClient_2";
+
+				if (globalMap.get("tRESTClient_2_NB_LINE") == null) {
+					globalMap.put("tRESTClient_2_NB_LINE", 1);
+				}
+
+// [tRESTCliend_end]
+				if (execStat) {
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row8");
+				}
+
+				ok_Hash.put("tRESTClient_2", true);
+				end_Hash.put("tRESTClient_2", System.currentTimeMillis());
+
+				/**
+				 * [tRESTClient_2 end ] stop
+				 */
+
+				/**
+				 * [tLogRow_4 end ] start
+				 */
+
+				currentComponent = "tLogRow_4";
+
+//////
+
+				java.io.PrintStream consoleOut_tLogRow_4 = null;
+				if (globalMap.get("tLogRow_CONSOLE") != null) {
+					consoleOut_tLogRow_4 = (java.io.PrintStream) globalMap.get("tLogRow_CONSOLE");
+				} else {
+					consoleOut_tLogRow_4 = new java.io.PrintStream(new java.io.BufferedOutputStream(System.out));
+					globalMap.put("tLogRow_CONSOLE", consoleOut_tLogRow_4);
+				}
+
+				consoleOut_tLogRow_4.println(util_tLogRow_4.format().toString());
+				consoleOut_tLogRow_4.flush();
+//////
+				globalMap.put("tLogRow_4_NB_LINE", nb_line_tLogRow_4);
+
+///////////////////////    			
+
+				if (execStat) {
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row9");
+				}
+
+				ok_Hash.put("tLogRow_4", true);
+				end_Hash.put("tLogRow_4", System.currentTimeMillis());
+
+				/**
+				 * [tLogRow_4 end ] stop
 				 */
 
 			} // end the resume
@@ -1841,7 +3866,7 @@ public class F011_API implements TalendJob {
 		} finally {
 
 			// free memory for "tMap_1"
-			globalMap.remove("tHash_Lookup_row5");
+			globalMap.remove("tHash_Lookup_row_api");
 
 			try {
 
@@ -1876,6 +3901,46 @@ public class F011_API implements TalendJob {
 				 */
 
 				/**
+				 * [tReplicate_1 finally ] start
+				 */
+
+				currentComponent = "tReplicate_1";
+
+				/**
+				 * [tReplicate_1 finally ] stop
+				 */
+
+				/**
+				 * [tFilterRow_1 finally ] start
+				 */
+
+				currentComponent = "tFilterRow_1";
+
+				/**
+				 * [tFilterRow_1 finally ] stop
+				 */
+
+				/**
+				 * [tXMLMap_1 finally ] start
+				 */
+
+				currentComponent = "tXMLMap_1";
+
+				/**
+				 * [tXMLMap_1 finally ] stop
+				 */
+
+				/**
+				 * [tJavaRow_1 finally ] start
+				 */
+
+				currentComponent = "tJavaRow_1";
+
+				/**
+				 * [tJavaRow_1 finally ] stop
+				 */
+
+				/**
 				 * [tLogRow_3 finally ] start
 				 */
 
@@ -1883,6 +3948,26 @@ public class F011_API implements TalendJob {
 
 				/**
 				 * [tLogRow_3 finally ] stop
+				 */
+
+				/**
+				 * [tRESTClient_2 finally ] start
+				 */
+
+				currentComponent = "tRESTClient_2";
+
+				/**
+				 * [tRESTClient_2 finally ] stop
+				 */
+
+				/**
+				 * [tLogRow_4 finally ] start
+				 */
+
+				currentComponent = "tLogRow_4";
+
+				/**
+				 * [tLogRow_4 finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -1896,7 +3981,7 @@ public class F011_API implements TalendJob {
 		globalMap.put("tFileInputDelimited_1_SUBPROCESS_STATE", 1);
 	}
 
-	public static class row5Struct implements routines.system.IPersistableComparableLookupRow<row5Struct> {
+	public static class row_apiStruct implements routines.system.IPersistableComparableLookupRow<row_apiStruct> {
 		final static byte[] commonByteArrayLock_API_CLIENT_F011_API = new byte[0];
 		static byte[] commonByteArray_API_CLIENT_F011_API = new byte[0];
 		protected static final int DEFAULT_HASHCODE = 1;
@@ -1958,7 +4043,7 @@ public class F011_API implements TalendJob {
 				return false;
 			if (getClass() != obj.getClass())
 				return false;
-			final row5Struct other = (row5Struct) obj;
+			final row_apiStruct other = (row_apiStruct) obj;
 
 			if (this.id == null) {
 				if (other.id != null)
@@ -1971,7 +4056,7 @@ public class F011_API implements TalendJob {
 			return true;
 		}
 
-		public void copyDataTo(row5Struct other) {
+		public void copyDataTo(row_apiStruct other) {
 
 			other.id = this.id;
 			other.nom = this.nom;
@@ -1981,7 +4066,7 @@ public class F011_API implements TalendJob {
 
 		}
 
-		public void copyKeysDataTo(row5Struct other) {
+		public void copyKeysDataTo(row_apiStruct other) {
 
 			other.id = this.id;
 
@@ -2125,7 +4210,7 @@ public class F011_API implements TalendJob {
 		/**
 		 * Compare keys
 		 */
-		public int compareTo(row5Struct other) {
+		public int compareTo(row_apiStruct other) {
 
 			int returnValue = -1;
 
@@ -2537,37 +4622,37 @@ public class F011_API implements TalendJob {
 
 				row1Struct row1 = new row1Struct();
 				row2Struct row2 = new row2Struct();
-				row2Struct row5 = row2;
+				row2Struct row_api = row2;
 
 				/**
-				 * [tAdvancedHash_row5 begin ] start
+				 * [tAdvancedHash_row_api begin ] start
 				 */
 
-				ok_Hash.put("tAdvancedHash_row5", false);
-				start_Hash.put("tAdvancedHash_row5", System.currentTimeMillis());
+				ok_Hash.put("tAdvancedHash_row_api", false);
+				start_Hash.put("tAdvancedHash_row_api", System.currentTimeMillis());
 
-				currentComponent = "tAdvancedHash_row5";
+				currentComponent = "tAdvancedHash_row_api";
 
 				if (execStat) {
-					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row5");
+					runStat.updateStatOnConnection(resourceMap, iterateId, 0, 0, "row_api");
 				}
 
-				int tos_count_tAdvancedHash_row5 = 0;
+				int tos_count_tAdvancedHash_row_api = 0;
 
-				// connection name:row5
-				// source node:tLogRow_1 - inputs:(row2) outputs:(row5,row5) | target
-				// node:tAdvancedHash_row5 - inputs:(row5) outputs:()
-				// linked node: tMap_1 - inputs:(row4,row5) outputs:(out1)
+				// connection name:row_api
+				// source node:tLogRow_1 - inputs:(row2) outputs:(row_api,row_api) | target
+				// node:tAdvancedHash_row_api - inputs:(row_api) outputs:()
+				// linked node: tMap_1 - inputs:(row_csv,row_api) outputs:(out1)
 
-				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row5 = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
+				org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE matchingModeEnum_row_api = org.talend.designer.components.lookup.common.ICommonLookup.MATCHING_MODE.UNIQUE_MATCH;
 
-				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row5Struct> tHash_Lookup_row5 = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
-						.<row5Struct>getLookup(matchingModeEnum_row5);
+				org.talend.designer.components.lookup.memory.AdvancedMemoryLookup<row_apiStruct> tHash_Lookup_row_api = org.talend.designer.components.lookup.memory.AdvancedMemoryLookup
+						.<row_apiStruct>getLookup(matchingModeEnum_row_api);
 
-				globalMap.put("tHash_Lookup_row5", tHash_Lookup_row5);
+				globalMap.put("tHash_Lookup_row_api", tHash_Lookup_row_api);
 
 				/**
-				 * [tAdvancedHash_row5 begin ] stop
+				 * [tAdvancedHash_row_api begin ] stop
 				 */
 
 				/**
@@ -2751,8 +4836,6 @@ public class F011_API implements TalendJob {
 
 					// if FORM request then capture query parameters into Form, otherwise set them
 					// as queries
-
-					webClient_tRESTClient_1.query("Accept", "application/json");
 
 					try {
 						// start send request
@@ -3024,7 +5107,7 @@ public class F011_API implements TalendJob {
 									runStat.updateStatOnConnection(iterateId, 1, 1, "row2");
 								}
 
-								row5 = row2;
+								row_api = row2;
 
 								tos_count_tLogRow_1++;
 
@@ -3043,53 +5126,53 @@ public class F011_API implements TalendJob {
 								 */
 
 								/**
-								 * [tAdvancedHash_row5 main ] start
+								 * [tAdvancedHash_row_api main ] start
 								 */
 
-								currentComponent = "tAdvancedHash_row5";
+								currentComponent = "tAdvancedHash_row_api";
 
 								if (execStat) {
-									runStat.updateStatOnConnection(iterateId, 1, 1, "row5");
+									runStat.updateStatOnConnection(iterateId, 1, 1, "row_api");
 								}
 
-								row5Struct row5_HashRow = new row5Struct();
+								row_apiStruct row_api_HashRow = new row_apiStruct();
 
-								row5_HashRow.id = row5.id;
+								row_api_HashRow.id = row_api.id;
 
-								row5_HashRow.nom = row5.nom;
+								row_api_HashRow.nom = row_api.nom;
 
-								row5_HashRow.prenom = row5.prenom;
+								row_api_HashRow.prenom = row_api.prenom;
 
-								row5_HashRow.email = row5.email;
+								row_api_HashRow.email = row_api.email;
 
-								row5_HashRow.ville = row5.ville;
+								row_api_HashRow.ville = row_api.ville;
 
-								tHash_Lookup_row5.put(row5_HashRow);
+								tHash_Lookup_row_api.put(row_api_HashRow);
 
-								tos_count_tAdvancedHash_row5++;
+								tos_count_tAdvancedHash_row_api++;
 
 								/**
-								 * [tAdvancedHash_row5 main ] stop
+								 * [tAdvancedHash_row_api main ] stop
 								 */
 
 								/**
-								 * [tAdvancedHash_row5 process_data_begin ] start
+								 * [tAdvancedHash_row_api process_data_begin ] start
 								 */
 
-								currentComponent = "tAdvancedHash_row5";
+								currentComponent = "tAdvancedHash_row_api";
 
 								/**
-								 * [tAdvancedHash_row5 process_data_begin ] stop
+								 * [tAdvancedHash_row_api process_data_begin ] stop
 								 */
 
 								/**
-								 * [tAdvancedHash_row5 process_data_end ] start
+								 * [tAdvancedHash_row_api process_data_end ] start
 								 */
 
-								currentComponent = "tAdvancedHash_row5";
+								currentComponent = "tAdvancedHash_row_api";
 
 								/**
-								 * [tAdvancedHash_row5 process_data_end ] stop
+								 * [tAdvancedHash_row_api process_data_end ] stop
 								 */
 
 								/**
@@ -3187,22 +5270,22 @@ public class F011_API implements TalendJob {
 				 */
 
 				/**
-				 * [tAdvancedHash_row5 end ] start
+				 * [tAdvancedHash_row_api end ] start
 				 */
 
-				currentComponent = "tAdvancedHash_row5";
+				currentComponent = "tAdvancedHash_row_api";
 
-				tHash_Lookup_row5.endPut();
+				tHash_Lookup_row_api.endPut();
 
 				if (execStat) {
-					runStat.updateStat(resourceMap, iterateId, 2, 0, "row5");
+					runStat.updateStat(resourceMap, iterateId, 2, 0, "row_api");
 				}
 
-				ok_Hash.put("tAdvancedHash_row5", true);
-				end_Hash.put("tAdvancedHash_row5", System.currentTimeMillis());
+				ok_Hash.put("tAdvancedHash_row_api", true);
+				end_Hash.put("tAdvancedHash_row_api", System.currentTimeMillis());
 
 				/**
-				 * [tAdvancedHash_row5 end ] stop
+				 * [tAdvancedHash_row_api end ] stop
 				 */
 
 			} // end the resume
@@ -3252,13 +5335,13 @@ public class F011_API implements TalendJob {
 				 */
 
 				/**
-				 * [tAdvancedHash_row5 finally ] start
+				 * [tAdvancedHash_row_api finally ] start
 				 */
 
-				currentComponent = "tAdvancedHash_row5";
+				currentComponent = "tAdvancedHash_row_api";
 
 				/**
-				 * [tAdvancedHash_row5 finally ] stop
+				 * [tAdvancedHash_row_api finally ] stop
 				 */
 
 			} catch (java.lang.Exception e) {
@@ -3663,6 +5746,6 @@ public class F011_API implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- * 102217 characters generated by Talend Open Studio for Data Integration on the
- * 26 avril 2026 20:38:08 CEST
+ * 157962 characters generated by Talend Open Studio for Data Integration on the
+ * 27 avril 2026 12:35:01 CEST
  ************************************************************************************************/

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;routines.JsonUtils.java&apos; to &apos;JsonBuilder.java&apos;&#x0D;&#x0A;- Original project: &apos;API_CLIENT_ROUTINES&apos;&#x0D;&#x0A;- Original element: &apos;routines.JsonUtils.java&apos;&#x0D;&#x0A;- Renamed element: &apos;routines.JsonBuilder.java&apos;" description="Rename compilation unit &apos;JsonUtils.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;routines{JsonUtils.java" name="JsonBuilder.java" references="false" stamp="1777281963039" version="1.0"/>
+</session>

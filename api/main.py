@@ -1,4 +1,6 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.exceptions import RequestValidationError
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import Optional
 import logging
@@ -6,9 +8,16 @@ import logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
-app = FastAPI(title="CRM", version="1.0.0")
+app = FastAPI(title="CRM Simulé", version="1.0.0")
 
-# Stockage en mémoire (simule un CRM/ERP distant)
+# Intercepte les erreurs de validation pour les logger
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    body = await request.body()
+    logger.error(f"422 - Body reçu brut : {body}")
+    logger.error(f"422 - Erreurs Pydantic : {exc.errors()}")
+    return JSONResponse(status_code=422, content={"detail": exc.errors()})
+
 clients_db: dict[int, dict] = {
     1: {"id": 1, "nom": "Dupont", "prenom": "Jean", "email": "jean.dupont@mail.com", "ville": "Paris"},
     2: {"id": 2, "nom": "Martin", "prenom": "Sophie", "email": "sophie.martin@mail.com", "ville": "Lyon"},
@@ -29,7 +38,6 @@ class ClientUpdate(BaseModel):
 
 @app.get("/clients", response_model=list[Client])
 def get_clients():
-    """Retourne tous les clients du système distant."""
     logger.info(f"GET /clients → {len(clients_db)} clients retournés")
     return list(clients_db.values())
 
@@ -40,8 +48,9 @@ def get_client(client_id: int):
     return clients_db[client_id]
 
 @app.post("/clients", response_model=Client, status_code=201)
-def create_client(client: Client):
-    """Crée un nouveau client."""
+async def create_client(request: Request, client: Client):
+    body = await request.body()
+    logger.info(f"POST body reçu : {body}")
     if client.id in clients_db:
         raise HTTPException(status_code=409, detail=f"Client {client.id} existe déjà")
     clients_db[client.id] = client.dict()
@@ -49,8 +58,9 @@ def create_client(client: Client):
     return clients_db[client.id]
 
 @app.put("/clients/{client_id}", response_model=Client)
-def update_client(client_id: int, update: ClientUpdate):
-    """Met à jour un client existant."""
+async def update_client(client_id: int, request: Request, update: ClientUpdate):
+    body = await request.body()
+    logger.info(f"PUT body reçu : {body}")
     if client_id not in clients_db:
         raise HTTPException(status_code=404, detail="Client non trouvé")
     stored = clients_db[client_id]

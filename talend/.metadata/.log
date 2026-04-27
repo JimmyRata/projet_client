@@ -6215,3 +6215,1215 @@ Caused by: java.lang.Exception: Error resolving artifact org.apache.zookeeper:zo
 
 !ENTRY org.eclipse.core.resources 2 10035 2026-04-26 21:37:17.782
 !MESSAGE The workspace will exit with unsaved changes in this session.
+!SESSION 2026-04-27 11:14:25.989 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_481
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.jdt.launching.macosx 4 0 2026-04-27 11:14:28.558
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.macosx [20]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:451)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1762)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1725)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1656)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.eclipse.jdt.launching.ui.macosx 4 0 2026-04-27 11:14:28.561
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jdt.launching.ui.macosx [21]
+  Unresolved requirement: Require-Capability: eclipse.platform; filter:="(osgi.os=macosx)"
+
+	at org.eclipse.osgi.container.Module.start(Module.java:451)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1783)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1762)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1725)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1656)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:233)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:343)
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:14:56.237
+!MESSAGE 2026-04-27 11:14:56,236 INFO  org.talend.utils.StudioKeysFileCheck  - encryptionKeyFilePath: C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\studio.keys
+
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-04-27 11:14:56.709
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:15:01.719
+!MESSAGE 2026-04-27 11:15:01,718 INFO  org.talend.repository.ui.login.LoginProjectPage  - validate updatesite...
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-27 11:18:04.351
+!MESSAGE 2026-04-27 11:18:04,350 WARN  org.talend.sdk.component.studio.logging.JULToOsgiHandler  - [org.talend.sdk.component.server.service.ComponentManagerService.init] No system property 'jdk.serialFilter', ensure it is intended
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:29.707
+!MESSAGE 2026-04-27 11:18:29,705 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:29.707
+!MESSAGE 2026-04-27 11:18:29,707 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Resources folder /API_CLIENT_ROUTINES/src/main/java overlaps with sources folder /API_CLIENT_ROUTINES/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:29.721
+!MESSAGE 2026-04-27 11:18:29,720 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_ROUTINES/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:29.722
+!MESSAGE 2026-04-27 11:18:29,721 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_ROUTINES/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:34.781
+!MESSAGE 2026-04-27 11:18:34,781 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Cryo\Documents\projet_client\talend\API_CLIENT\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:34.781
+!MESSAGE 2026-04-27 11:18:34,781 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:37.043
+!MESSAGE 2026-04-27 11:18:37,043 INFO  org.talend.core.repository.model.ProxyRepositoryFactory  - user@talend.com connecté à api_client
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:38.097
+!MESSAGE 2026-04-27 11:18:38,097 INFO  org.talend.core.repository.logintask.ReadOnlyProjectConfirm  - ReadOnly confirm
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:49.064
+!MESSAGE 2026-04-27 11:18:49,064 INFO  org.talend.librariesmanager.librarydata.LibraryDataService  - org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact com.teradata:tdgssconfig:pom:16.20.00.02 in talend (https://talend-update.talend.com/nexus/content/repositories/libraries/)
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:18:49.365
+!MESSAGE 2026-04-27 11:18:49,365 INFO  org.talend.librariesmanager.librarydata.LibraryDataService  - org.eclipse.aether.resolution.ArtifactResolutionException: Could not find artifact com.teradata:terajdbc4:pom:16.20.00.02 in talend (https://talend-update.talend.com/nexus/content/repositories/libraries/)
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-27 11:18:49.768
+!MESSAGE 2026-04-27 11:18:49,768 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: esb-java-11-group
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-27 11:18:49.779
+!MESSAGE 2026-04-27 11:18:49,779 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: esb-java-11-group
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:21:47.551
+!MESSAGE 2026-04-27 11:21:47,551 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:21:47.733
+!MESSAGE 2026-04-27 11:21:47,733 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:21:47.735
+!MESSAGE 2026-04-27 11:21:47,733 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:21:47.737
+!MESSAGE 2026-04-27 11:21:47,737 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:21:47.738
+!MESSAGE 2026-04-27 11:21:47,738 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 2 0 2026-04-27 11:21:50.524
+!MESSAGE 2026-04-27 11:21:50,523 WARN  org.talend.commons.exception.CommonExceptionHandler  - Missing module group definition: esb-java-11-group
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:24:42.747
+!MESSAGE 2026-04-27 11:24:42,746 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Cryo\Documents\projet_client\talend\API_CLIENT\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:24:42.748
+!MESSAGE 2026-04-27 11:24:42,748 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:25:45.288
+!MESSAGE 2026-04-27 11:25:45,288 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Cryo\Documents\projet_client\talend\API_CLIENT\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:25:45.288
+!MESSAGE 2026-04-27 11:25:45,288 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:26:04.861
+!MESSAGE 2026-04-27 11:26:04,861 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Cryo\Documents\projet_client\talend\API_CLIENT\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:26:04.863
+!MESSAGE 2026-04-27 11:26:04,863 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:29:36.531
+!MESSAGE 2026-04-27 11:29:36,531 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /.Java/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:29:36.533
+!MESSAGE 2026-04-27 11:29:36,531 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /.Java/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:29:36.533
+!MESSAGE 2026-04-27 11:29:36,533 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /.Java/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:29:36.533
+!MESSAGE 2026-04-27 11:29:36,533 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /.Java/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:23.312
+!MESSAGE 2026-04-27 11:47:23,312 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Cryo\Documents\projet_client\talend\API_CLIENT\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:23.312
+!MESSAGE 2026-04-27 11:47:23,312 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:47:30.974
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:31.025
+!MESSAGE 2026-04-27 11:47:31,024 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-27 11:47:31.031
+!MESSAGE 2026-04-27 11:47:31,031 ERROR org.talend.commons.exception.CommonExceptionHandler  - org.eclipse.core.runtime.OperationCanceledException
+
+!STACK 0
+org.talend.designer.runprocess.ProcessorException: org.eclipse.core.runtime.OperationCanceledException
+	at org.talend.designer.runprocess.ProcessorUtilities.generateBuildInfo(ProcessorUtilities.java:947)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateCode(ProcessorUtilities.java:615)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateCode(ProcessorUtilities.java:2068)
+	at org.talend.designer.runprocess.RunProcessContext$1.run(RunProcessContext.java:601)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:440)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:356)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:474)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:240)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:966)
+	at org.talend.designer.runprocess.RunProcessContext.exec(RunProcessContext.java:548)
+	at org.talend.designer.runprocess.ui.ProcessComposite.exec(ProcessComposite.java:1448)
+	at org.talend.designer.runprocess.ui.views.ProcessView$RunAction.run(ProcessView.java:700)
+	at org.talend.designer.runprocess.ui.actions.RunProcessAction.run(RunProcessAction.java:63)
+	at org.talend.designer.core.debug.JobLaunchConfigurationDelegate$1$1.run(JobLaunchConfigurationDelegate.java:98)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.talend.rcp.intro.Application.start(Application.java:280)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+Caused by: org.eclipse.core.runtime.OperationCanceledException
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:367)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:349)
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.refresh(ProjectRegistryManager.java:296)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration0(ProjectConfigurationManager.java:405)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$2.call(ProjectConfigurationManager.java:352)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager$2.call(ProjectConfigurationManager.java:1)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.executeBare(MavenExecutionContext.java:177)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:151)
+	at org.eclipse.m2e.core.internal.embedder.MavenExecutionContext.execute(MavenExecutionContext.java:99)
+	at org.eclipse.m2e.core.internal.embedder.MavenImpl.execute(MavenImpl.java:1332)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:349)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:335)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:317)
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.updateProjectConfiguration(ProjectConfigurationManager.java:306)
+	at org.talend.designer.maven.utils.MavenProjectUtils.updateMavenProject(MavenProjectUtils.java:96)
+	at org.talend.designer.runprocess.maven.MavenJavaProcessor.build(MavenJavaProcessor.java:428)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateBuildInfo(ProcessorUtilities.java:944)
+	... 38 more
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:47:52.663
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:52.736
+!MESSAGE 2026-04-27 11:47:52,736 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:52.881
+!MESSAGE 2026-04-27 11:47:52,880 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:53.053
+!MESSAGE 2026-04-27 11:47:53,053 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:53.055
+!MESSAGE 2026-04-27 11:47:53,055 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:53.056
+!MESSAGE 2026-04-27 11:47:53,056 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:53.057
+!MESSAGE 2026-04-27 11:47:53,057 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:53.193
+!MESSAGE 2026-04-27 11:47:53,193 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:47:53.441
+!MESSAGE 2026-04-27 11:47:53,441 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-27 11:47:53.541
+!MESSAGE 2026-04-27 11:47:53,541 ERROR org.talend.commons.exception.CommonExceptionHandler  - Erreurs de compilation du Job 
+Au moins le Job "F011_API" a des erreurs de compilation, réparez et réexportez.
+Ligne en erreur: 2792
+Message détaillé: ville cannot be resolved or is not a field
+Il peut y avoir d'autres erreurs causées par la compatibilité avec la JVM. Vérifiez que les paramètres de votre JVM sont les mêmes que dans le studio.
+
+!STACK 0
+org.talend.designer.runprocess.ProcessorException: Erreurs de compilation du Job 
+Au moins le Job "F011_API" a des erreurs de compilation, réparez et réexportez.
+Ligne en erreur: 2792
+Message détaillé: ville cannot be resolved or is not a field
+Il peut y avoir d'autres erreurs causées par la compatibilité avec la JVM. Vérifiez que les paramètres de votre JVM sont les mêmes que dans le studio.
+	at org.talend.designer.runprocess.JobErrorsChecker.checkLastGenerationHasCompilationError(JobErrorsChecker.java:358)
+	at org.talend.designer.runprocess.DefaultRunProcessService.checkLastGenerationHasCompilationError(DefaultRunProcessService.java:539)
+	at org.talend.designer.runprocess.RunProcessService.checkLastGenerationHasCompilationError(RunProcessService.java:317)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateBuildInfo(ProcessorUtilities.java:955)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateCode(ProcessorUtilities.java:615)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateCode(ProcessorUtilities.java:2068)
+	at org.talend.designer.runprocess.RunProcessContext$1.run(RunProcessContext.java:601)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:440)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:356)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:474)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:240)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:966)
+	at org.talend.designer.runprocess.RunProcessContext.exec(RunProcessContext.java:548)
+	at org.talend.designer.runprocess.ui.ProcessComposite.exec(ProcessComposite.java:1448)
+	at org.talend.designer.runprocess.ui.views.ProcessView$RunAction.run(ProcessView.java:700)
+	at org.talend.designer.runprocess.ui.actions.RunProcessAction.run(RunProcessAction.java:63)
+	at org.talend.designer.core.debug.JobLaunchConfigurationDelegate$1$1.run(JobLaunchConfigurationDelegate.java:98)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.talend.rcp.intro.Application.start(Application.java:280)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:49:05.845
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:05.914
+!MESSAGE 2026-04-27 11:49:05,914 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:06.036
+!MESSAGE 2026-04-27 11:49:06,036 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:06.188
+!MESSAGE 2026-04-27 11:49:06,188 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:06.188
+!MESSAGE 2026-04-27 11:49:06,188 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:06.190
+!MESSAGE 2026-04-27 11:49:06,190 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:06.190
+!MESSAGE 2026-04-27 11:49:06,190 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:06.287
+!MESSAGE 2026-04-27 11:49:06,286 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:06.474
+!MESSAGE 2026-04-27 11:49:06,474 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:49:06.657
+!MESSAGE 2026-04-27 11:49:06,657 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3703 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:51:20.922
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:20.991
+!MESSAGE 2026-04-27 11:51:20,991 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:21.084
+!MESSAGE 2026-04-27 11:51:21,082 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:21.223
+!MESSAGE 2026-04-27 11:51:21,221 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:21.223
+!MESSAGE 2026-04-27 11:51:21,223 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:21.224
+!MESSAGE 2026-04-27 11:51:21,224 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:21.225
+!MESSAGE 2026-04-27 11:51:21,224 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:21.311
+!MESSAGE 2026-04-27 11:51:21,309 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:21.541
+!MESSAGE 2026-04-27 11:51:21,541 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:51:21.724
+!MESSAGE 2026-04-27 11:51:21,724 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3663 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:54:28.068
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:28.125
+!MESSAGE 2026-04-27 11:54:28,125 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:28.207
+!MESSAGE 2026-04-27 11:54:28,207 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:28.344
+!MESSAGE 2026-04-27 11:54:28,343 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:28.344
+!MESSAGE 2026-04-27 11:54:28,344 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:28.346
+!MESSAGE 2026-04-27 11:54:28,346 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:28.347
+!MESSAGE 2026-04-27 11:54:28,346 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:28.472
+!MESSAGE 2026-04-27 11:54:28,472 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:28.658
+!MESSAGE 2026-04-27 11:54:28,658 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 4 0 2026-04-27 11:54:28.676
+!MESSAGE 2026-04-27 11:54:28,676 ERROR org.talend.commons.exception.CommonExceptionHandler  - Erreurs de compilation du Job 
+Au moins le Job "F011_API" a des erreurs de compilation, réparez et réexportez.
+Ligne en erreur: 3237
+Message détaillé: input_row cannot be resolved to a variable
+Il peut y avoir d'autres erreurs causées par la compatibilité avec la JVM. Vérifiez que les paramètres de votre JVM sont les mêmes que dans le studio.
+
+!STACK 0
+org.talend.designer.runprocess.ProcessorException: Erreurs de compilation du Job 
+Au moins le Job "F011_API" a des erreurs de compilation, réparez et réexportez.
+Ligne en erreur: 3237
+Message détaillé: input_row cannot be resolved to a variable
+Il peut y avoir d'autres erreurs causées par la compatibilité avec la JVM. Vérifiez que les paramètres de votre JVM sont les mêmes que dans le studio.
+	at org.talend.designer.runprocess.JobErrorsChecker.checkLastGenerationHasCompilationError(JobErrorsChecker.java:358)
+	at org.talend.designer.runprocess.DefaultRunProcessService.checkLastGenerationHasCompilationError(DefaultRunProcessService.java:539)
+	at org.talend.designer.runprocess.RunProcessService.checkLastGenerationHasCompilationError(RunProcessService.java:317)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateBuildInfo(ProcessorUtilities.java:955)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateCode(ProcessorUtilities.java:615)
+	at org.talend.designer.runprocess.ProcessorUtilities.generateCode(ProcessorUtilities.java:2068)
+	at org.talend.designer.runprocess.RunProcessContext$1.run(RunProcessContext.java:601)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:440)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:356)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:474)
+	at org.eclipse.ui.internal.progress.ProgressMonitorJobsDialog.run(ProgressMonitorJobsDialog.java:240)
+	at org.eclipse.ui.internal.progress.ProgressManager.run(ProgressManager.java:966)
+	at org.talend.designer.runprocess.RunProcessContext.exec(RunProcessContext.java:548)
+	at org.talend.designer.runprocess.ui.ProcessComposite.exec(ProcessComposite.java:1448)
+	at org.talend.designer.runprocess.ui.views.ProcessView$RunAction.run(ProcessView.java:700)
+	at org.talend.designer.runprocess.ui.actions.RunProcessAction.run(RunProcessAction.java:63)
+	at org.talend.designer.core.debug.JobLaunchConfigurationDelegate$1$1.run(JobLaunchConfigurationDelegate.java:98)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3919)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3550)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1173)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1062)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:636)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:563)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:151)
+	at org.talend.rcp.intro.Application.start(Application.java:280)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:400)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:54:43.192
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:43.254
+!MESSAGE 2026-04-27 11:54:43,254 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:43.334
+!MESSAGE 2026-04-27 11:54:43,334 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:43.544
+!MESSAGE 2026-04-27 11:54:43,542 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:43.544
+!MESSAGE 2026-04-27 11:54:43,544 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:43.547
+!MESSAGE 2026-04-27 11:54:43,547 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:43.547
+!MESSAGE 2026-04-27 11:54:43,547 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:43.645
+!MESSAGE 2026-04-27 11:54:43,645 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:43.837
+!MESSAGE 2026-04-27 11:54:43,837 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:54:44.012
+!MESSAGE 2026-04-27 11:54:44,012 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3979 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:55:18.445
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:18.506
+!MESSAGE 2026-04-27 11:55:18,506 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:18.601
+!MESSAGE 2026-04-27 11:55:18,601 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:18.783
+!MESSAGE 2026-04-27 11:55:18,782 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:18.783
+!MESSAGE 2026-04-27 11:55:18,783 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:18.786
+!MESSAGE 2026-04-27 11:55:18,785 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:18.786
+!MESSAGE 2026-04-27 11:55:18,786 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:18.898
+!MESSAGE 2026-04-27 11:55:18,898 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:19.100
+!MESSAGE 2026-04-27 11:55:19,100 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:19.157
+!MESSAGE 2026-04-27 11:55:19,157 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3397 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:55:38.160
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.215
+!MESSAGE 2026-04-27 11:55:38,215 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.287
+!MESSAGE 2026-04-27 11:55:38,287 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.431
+!MESSAGE 2026-04-27 11:55:38,430 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.431
+!MESSAGE 2026-04-27 11:55:38,431 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.432
+!MESSAGE 2026-04-27 11:55:38,432 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.434
+!MESSAGE 2026-04-27 11:55:38,432 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.525
+!MESSAGE 2026-04-27 11:55:38,525 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.694
+!MESSAGE 2026-04-27 11:55:38,694 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:55:38.871
+!MESSAGE 2026-04-27 11:55:38,871 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3523 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 11:59:47.744
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:47.810
+!MESSAGE 2026-04-27 11:59:47,810 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:47.909
+!MESSAGE 2026-04-27 11:59:47,909 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:48.092
+!MESSAGE 2026-04-27 11:59:48,092 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:48.093
+!MESSAGE 2026-04-27 11:59:48,092 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:48.095
+!MESSAGE 2026-04-27 11:59:48,095 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:48.096
+!MESSAGE 2026-04-27 11:59:48,096 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:48.210
+!MESSAGE 2026-04-27 11:59:48,209 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:48.404
+!MESSAGE 2026-04-27 11:59:48,404 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 11:59:48.588
+!MESSAGE 2026-04-27 11:59:48,588 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=4034 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:00:10.832
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:10.902
+!MESSAGE 2026-04-27 12:00:10,902 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:10.987
+!MESSAGE 2026-04-27 12:00:10,987 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:11.135
+!MESSAGE 2026-04-27 12:00:11,135 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:11.135
+!MESSAGE 2026-04-27 12:00:11,135 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:11.136
+!MESSAGE 2026-04-27 12:00:11,136 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:11.137
+!MESSAGE 2026-04-27 12:00:11,137 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:11.228
+!MESSAGE 2026-04-27 12:00:11,228 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:11.420
+!MESSAGE 2026-04-27 12:00:11,419 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:00:11.592
+!MESSAGE 2026-04-27 12:00:11,592 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3554 %*
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:52.528
+!MESSAGE 2026-04-27 12:01:52,526 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  - C:\Users\Cryo\Documents\projet_client\talend\API_CLIENT\poms\code\routines
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:52.528
+!MESSAGE 2026-04-27 12:01:52,528 INFO  org.eclipse.m2e.internal.launch.MavenLaunchDelegate  -  mvn -B -o -s C:\Users\Cryo\Documents\TOS_DI-20200219_1130-V7.3.1\TOS_DI-20200219_1130-V7.3.1\configuration\maven_user_settings.xml install -llr -Dmaven.main.skip=true -Dci.builder.skip=true
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:01:54.796
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:54.811
+!MESSAGE 2026-04-27 12:01:54,810 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:54.911
+!MESSAGE 2026-04-27 12:01:54,911 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:55.074
+!MESSAGE 2026-04-27 12:01:55,074 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:55.075
+!MESSAGE 2026-04-27 12:01:55,074 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:55.077
+!MESSAGE 2026-04-27 12:01:55,077 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:55.078
+!MESSAGE 2026-04-27 12:01:55,077 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:55.164
+!MESSAGE 2026-04-27 12:01:55,162 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:55.310
+!MESSAGE 2026-04-27 12:01:55,309 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:01:55.493
+!MESSAGE 2026-04-27 12:01:55,493 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3475 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:03:13.798
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:13.856
+!MESSAGE 2026-04-27 12:03:13,856 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:13.943
+!MESSAGE 2026-04-27 12:03:13,943 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:14.092
+!MESSAGE 2026-04-27 12:03:14,092 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:14.092
+!MESSAGE 2026-04-27 12:03:14,092 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:14.094
+!MESSAGE 2026-04-27 12:03:14,094 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:14.095
+!MESSAGE 2026-04-27 12:03:14,094 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:14.181
+!MESSAGE 2026-04-27 12:03:14,181 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:14.338
+!MESSAGE 2026-04-27 12:03:14,337 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:03:14.513
+!MESSAGE 2026-04-27 12:03:14,513 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3470 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:09:19.327
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:19.387
+!MESSAGE 2026-04-27 12:09:19,387 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:19.474
+!MESSAGE 2026-04-27 12:09:19,474 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:19.625
+!MESSAGE 2026-04-27 12:09:19,625 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:19.625
+!MESSAGE 2026-04-27 12:09:19,625 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:19.627
+!MESSAGE 2026-04-27 12:09:19,627 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:19.628
+!MESSAGE 2026-04-27 12:09:19,627 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:19.715
+!MESSAGE 2026-04-27 12:09:19,715 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:19.900
+!MESSAGE 2026-04-27 12:09:19,900 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:09:20.079
+!MESSAGE 2026-04-27 12:09:20,079 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3942 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:10:13.206
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.264
+!MESSAGE 2026-04-27 12:10:13,264 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.335
+!MESSAGE 2026-04-27 12:10:13,335 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.481
+!MESSAGE 2026-04-27 12:10:13,481 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.482
+!MESSAGE 2026-04-27 12:10:13,482 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.483
+!MESSAGE 2026-04-27 12:10:13,483 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.483
+!MESSAGE 2026-04-27 12:10:13,483 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.584
+!MESSAGE 2026-04-27 12:10:13,584 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.745
+!MESSAGE 2026-04-27 12:10:13,744 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:13.909
+!MESSAGE 2026-04-27 12:10:13,909 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3441 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:10:33.332
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:33.390
+!MESSAGE 2026-04-27 12:10:33,390 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:33.475
+!MESSAGE 2026-04-27 12:10:33,473 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:33.657
+!MESSAGE 2026-04-27 12:10:33,655 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:33.657
+!MESSAGE 2026-04-27 12:10:33,657 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:33.658
+!MESSAGE 2026-04-27 12:10:33,658 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:33.658
+!MESSAGE 2026-04-27 12:10:33,658 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:33.759
+!MESSAGE 2026-04-27 12:10:33,759 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:33.954
+!MESSAGE 2026-04-27 12:10:33,952 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:10:34.150
+!MESSAGE 2026-04-27 12:10:34,150 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=4056 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:11:48.803
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:48.864
+!MESSAGE 2026-04-27 12:11:48,863 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:48.953
+!MESSAGE 2026-04-27 12:11:48,953 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:49.134
+!MESSAGE 2026-04-27 12:11:49,134 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:49.135
+!MESSAGE 2026-04-27 12:11:49,134 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:49.137
+!MESSAGE 2026-04-27 12:11:49,135 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:49.137
+!MESSAGE 2026-04-27 12:11:49,137 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:49.221
+!MESSAGE 2026-04-27 12:11:49,219 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:49.375
+!MESSAGE 2026-04-27 12:11:49,375 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:11:49.539
+!MESSAGE 2026-04-27 12:11:49,539 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3351 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:14:19.831
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:19.894
+!MESSAGE 2026-04-27 12:14:19,894 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:19.989
+!MESSAGE 2026-04-27 12:14:19,988 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:20.136
+!MESSAGE 2026-04-27 12:14:20,136 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:20.136
+!MESSAGE 2026-04-27 12:14:20,136 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:20.137
+!MESSAGE 2026-04-27 12:14:20,137 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:20.137
+!MESSAGE 2026-04-27 12:14:20,137 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:20.208
+!MESSAGE 2026-04-27 12:14:20,208 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:20.364
+!MESSAGE 2026-04-27 12:14:20,362 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:20.526
+!MESSAGE 2026-04-27 12:14:20,526 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3662 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:14:31.917
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:31.976
+!MESSAGE 2026-04-27 12:14:31,976 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:32.064
+!MESSAGE 2026-04-27 12:14:32,064 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:32.209
+!MESSAGE 2026-04-27 12:14:32,209 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:32.210
+!MESSAGE 2026-04-27 12:14:32,209 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:32.211
+!MESSAGE 2026-04-27 12:14:32,211 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:32.212
+!MESSAGE 2026-04-27 12:14:32,212 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:32.297
+!MESSAGE 2026-04-27 12:14:32,297 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:32.455
+!MESSAGE 2026-04-27 12:14:32,454 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:14:32.611
+!MESSAGE 2026-04-27 12:14:32,611 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=4021 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:15:07.082
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.140
+!MESSAGE 2026-04-27 12:15:07,140 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.221
+!MESSAGE 2026-04-27 12:15:07,221 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.372
+!MESSAGE 2026-04-27 12:15:07,370 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.372
+!MESSAGE 2026-04-27 12:15:07,372 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.373
+!MESSAGE 2026-04-27 12:15:07,373 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.373
+!MESSAGE 2026-04-27 12:15:07,373 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.464
+!MESSAGE 2026-04-27 12:15:07,463 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.646
+!MESSAGE 2026-04-27 12:15:07,644 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:15:07.811
+!MESSAGE 2026-04-27 12:15:07,811 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3952 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:17:16.577
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:16.643
+!MESSAGE 2026-04-27 12:17:16,643 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:16.726
+!MESSAGE 2026-04-27 12:17:16,726 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:16.912
+!MESSAGE 2026-04-27 12:17:16,912 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:16.912
+!MESSAGE 2026-04-27 12:17:16,912 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:16.914
+!MESSAGE 2026-04-27 12:17:16,914 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:16.914
+!MESSAGE 2026-04-27 12:17:16,914 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:17.015
+!MESSAGE 2026-04-27 12:17:17,014 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:17.179
+!MESSAGE 2026-04-27 12:17:17,177 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:17.340
+!MESSAGE 2026-04-27 12:17:17,340 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3368 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:17:25.655
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:25.713
+!MESSAGE 2026-04-27 12:17:25,713 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:25.798
+!MESSAGE 2026-04-27 12:17:25,797 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:25.964
+!MESSAGE 2026-04-27 12:17:25,964 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:25.964
+!MESSAGE 2026-04-27 12:17:25,964 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:25.965
+!MESSAGE 2026-04-27 12:17:25,965 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:25.967
+!MESSAGE 2026-04-27 12:17:25,965 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:26.053
+!MESSAGE 2026-04-27 12:17:26,052 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:26.199
+!MESSAGE 2026-04-27 12:17:26,197 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:17:26.363
+!MESSAGE 2026-04-27 12:17:26,363 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3644 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:33:51.074
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.133
+!MESSAGE 2026-04-27 12:33:51,133 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.205
+!MESSAGE 2026-04-27 12:33:51,205 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.335
+!MESSAGE 2026-04-27 12:33:51,335 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.335
+!MESSAGE 2026-04-27 12:33:51,335 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.337
+!MESSAGE 2026-04-27 12:33:51,337 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.337
+!MESSAGE 2026-04-27 12:33:51,337 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.427
+!MESSAGE 2026-04-27 12:33:51,427 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.594
+!MESSAGE 2026-04-27 12:33:51,592 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:33:51.772
+!MESSAGE 2026-04-27 12:33:51,772 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3485 %*
+
+
+!ENTRY org.talend.designer.runprocess 2 0 2026-04-27 12:35:02.089
+!MESSAGE ESB configuration folder does not exists - file:/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/esb
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.159
+!MESSAGE 2026-04-27 12:35:02,159 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update started
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.244
+!MESSAGE 2026-04-27 12:35:02,243 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.376
+!MESSAGE 2026-04-27 12:35:02,376 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/main/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.378
+!MESSAGE 2026-04-27 12:35:02,376 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/main/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.379
+!MESSAGE 2026-04-27 12:35:02,379 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding source folder /API_CLIENT_F011_API_0.1/src/test/java
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.379
+!MESSAGE 2026-04-27 12:35:02,379 INFO  org.eclipse.m2e.jdt.internal.AbstractJavaProjectConfigurator  - Adding resource folder /API_CLIENT_F011_API_0.1/src/test/resources
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.480
+!MESSAGE 2026-04-27 12:35:02,479 INFO  org.eclipse.m2e.core.internal.project.ProjectConfigurationManager  - Update completed: 0 sec
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.661
+!MESSAGE 2026-04-27 12:35:02,661 INFO  org.eclipse.m2e.core.internal.project.WorkspaceClassifierResolverManager  - Resolving P/API_CLIENT_ROUTINES: org.example.api_client.code:routines:7.3.1 with classifier  to /API_CLIENT_ROUTINES/target/classes
+
+
+!ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.849
+!MESSAGE 2026-04-27 12:35:02,849 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3401 %*
+

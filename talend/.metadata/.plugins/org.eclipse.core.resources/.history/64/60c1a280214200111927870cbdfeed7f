@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Property xmi:id="__uwSoEGWEfGIYKlkxyhvQQ" id="__utPUEGWEfGIYKlkxyhvQQ" label="F011_API" version="0.1" statusCode="" item="__uwSokGWEfGIYKlkxyhvQQ" displayName="F011_API">
+    <author href="../../talend.project#_wCvFsEGWEfGIYKlkxyhvQQ"/>
+    <additionalProperties xmi:id="__uzV8EGWEfGIYKlkxyhvQQ" key="created_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="__uzV8UGWEfGIYKlkxyhvQQ" key="created_product_version" value="7.3.1.20200219_1130"/>
+    <additionalProperties xmi:id="__uzV8kGWEfGIYKlkxyhvQQ" key="created_date" value="2026-04-26T19:40:20.303+0200"/>
+    <additionalProperties xmi:id="__uz9AEGWEfGIYKlkxyhvQQ" key="modified_product_fullname" value="Talend Open Studio for Data Integration"/>
+    <additionalProperties xmi:id="__uz9AUGWEfGIYKlkxyhvQQ" key="modified_product_version" value="7.3.1.20200219_1130"/>
+    <additionalProperties xmi:id="__uz9AkGWEfGIYKlkxyhvQQ" key="modified_date" value="2026-04-27T12:10:33.061+0200"/>
+  </TalendProperties:Property>
+  <TalendProperties:ItemState xmi:id="__uwSoUGWEfGIYKlkxyhvQQ" path="F01_CLIENT" locked="true" lockDate="2026-04-27T11:21:45.600+0200">
+    <locker href="../../talend.project#_wCvFsEGWEfGIYKlkxyhvQQ"/>
+  </TalendProperties:ItemState>
+  <TalendProperties:ProcessItem xmi:id="__uwSokGWEfGIYKlkxyhvQQ" property="__uwSoEGWEfGIYKlkxyhvQQ" state="__uwSoUGWEfGIYKlkxyhvQQ">
+    <process href="F011_API_0.1.item#/"/>
+  </TalendProperties:ProcessItem>
+</xmi:XMI>

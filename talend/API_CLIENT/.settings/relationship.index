@@ -9,6 +9,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "JsonBuilder",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
     "id" : "Mathematical",
     "version" : "Latest",
     "type" : "routine"

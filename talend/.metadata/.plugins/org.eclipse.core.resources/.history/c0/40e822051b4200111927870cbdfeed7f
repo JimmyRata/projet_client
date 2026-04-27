@@ -1,0 +1,86 @@
+package routines;
+package routines;
+
+import java.util.Map;
+import java.util.LinkedHashMap;
+
+/**
+ * JsonBuilder - Routine générique de construction de JSON
+ * Réutilisable sur tous les jobs Talend
+ * 
+ * @author TonNom
+ * @version 1.0
+ */
+public class JsonBuilder {
+
+    /**
+     * Convertit une Map de champs en JSON string
+     * 
+     * Gère automatiquement :
+     * - Les types numériques (Integer, Long, Double)
+     * - Les booléens
+     * - Les chaînes de caractères (avec échappement)
+     * - Les valeurs nulles
+     * 
+     * Exemple d'utilisation :
+     *   Map<String, Object> fields = new LinkedHashMap<>();
+     *   fields.put("id", 1);
+     *   fields.put("nom", "Dupont");
+     *   fields.put("actif", true);
+     *   JsonBuilder.toJson(fields);
+     *   → {"id":1,"nom":"Dupont","actif":true}
+     */
+    public static String toJson(Map<String, Object> fields) {
+        if (fields == null || fields.isEmpty()) {
+            return "{}";
+        }
+
+        StringBuilder sb = new StringBuilder("{");
+        boolean first = true;
+
+        for (Map.Entry<String, Object> entry : fields.entrySet()) {
+            if (!first) sb.append(",");
+            first = false;
+
+            // Clé
+            sb.append("\"")
+              .append(escapeString(entry.getKey()))
+              .append("\":");
+
+            // Valeur selon le type
+            Object value = entry.getValue();
+            if (value == null) {
+                sb.append("null");
+            } else if (value instanceof Integer
+                    || value instanceof Long
+                    || value instanceof Double
+                    || value instanceof Float) {
+                sb.append(value);
+            } else if (value instanceof Boolean) {
+                sb.append(value);
+            } else {
+                sb.append("\"")
+                  .append(escapeString(value.toString()))
+                  .append("\"");
+            }
+        }
+
+        sb.append("}");
+        return sb.toString();
+    }
+
+    /**
+     * Échappe les caractères spéciaux JSON
+     * Gère : guillemets, backslash, accents, retours à la ligne, tabulations
+     */
+    private static String escapeString(String value) {
+        if (value == null) return "";
+        return value
+            .replace("\\", "\\\\")
+            .replace("\"", "\\\"")
+            .replace("\n", "\\n")
+            .replace("\r", "\\r")
+            .replace("\t", "\\t")
+            .replace("/", "\\/");
+    }
+}

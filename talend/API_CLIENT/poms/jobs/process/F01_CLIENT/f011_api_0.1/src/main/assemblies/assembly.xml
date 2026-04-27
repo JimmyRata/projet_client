@@ -300,6 +300,7 @@
                 <include>org.apache.cxf:cxf-rt-security-saml:jar:3.3.4</include>
                 <include>org.dom4j:dom4j:jar:2.1.1</include>
                 <include>org.apache.cxf:cxf-rt-transports-http:jar:3.3.4</include>
+                <include>jaxen:jaxen:jar:1.1.6</include>
                 <include>commons-logging:commons-logging:jar:1.2.0</include>
                 <include>net.minidev:accessors-smart:jar:1.1</include>
                 <include>org.apache.cxf:cxf-rt-wsdl:jar:3.3.4</include>
