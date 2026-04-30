@@ -7427,3 +7427,6 @@ Il peut y avoir d'autres erreurs causées par la compatibilité avec la JVM. Vé
 !ENTRY org.talend.platform.logging 1 0 2026-04-27 12:35:02.849
 !MESSAGE 2026-04-27 12:35:02,849 INFO  org.talend.designer.core.runprocess.Processor  - CommandLine: C:/Program Files/Java/jre1.8.0_481/bin/java.exe -Xms256M -Xmx1024M -Dtalend.component.manager.m2.repository=C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/.m2/repository -Dfile.encoding=UTF-8 -Dencryption.keys.file=/C:/Users/Cryo/Documents/TOS_DI-20200219_1130-V7.3.1/TOS_DI-20200219_1130-V7.3.1/configuration/studio.keys -cp C:/Users/Cryo/Documents/projet_client/talend/API_CLIENT/poms/jobs/process/F01_CLIENT/f011_api_0.1/target/classpath.jar; api_client.f011_api_0_1.F011_API --context=Default --stat_port=3401 %*
 
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-04-27 13:48:48.808
+!MESSAGE The workspace will exit with unsaved changes in this session.
